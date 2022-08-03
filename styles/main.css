@@ -1,0 +1,99 @@
+/* Webfonts */
+@import "_fonts.css";
+
+/* Tailwind base/components */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* Custom Style Imports */
+@import "_typography.css";
+@import "_locomotive.css";
+
+/* Tailwind Utilities */
+@import "tailwindcss/utilities";
+
+/* Simple defaults */
+body {
+  @apply font-sans antialiased text-black bg-white;
+}
+
+h1 {
+  @apply font-sans mb-3   leading-tight;
+}
+
+h2 {
+  @apply font-sans tracking-tight;
+}
+
+h3 {
+  @apply text-4xl font-futuraLight tracking-tight;
+}
+
+h4 {
+  @apply text-2xl;
+}
+
+p,
+a {
+  @apply font-futuraLight no-underline;
+}
+
+li {
+  @apply text-xl xl:text-2xl;
+}
+
+p {
+  @apply text-lg sm:text-xl  xl:text-2xl;
+}
+
+@layer components {
+  /* Hero Headline*/
+  .hero-container {
+    max-width: 1000px;
+  }
+
+  /* Scroll Indicator */
+  .arrow {
+    top: 85%;
+  }
+
+  /* Naviagtion underline */
+  .shadow {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    border-radius: 4px;
+    z-index: -1;
+    height: 10%;
+    top: 29px;
+  }
+
+  /* Burger */
+  .bar {
+    height: 1px;
+    background: "black";
+  }
+
+  /* Overlay Menu Item*/
+  .menu-overlay-item {
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+  }
+
+  .menu-overlay-item:hover {
+    /* temporary fix: !important */
+    transform: translateX(15px) !important;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
