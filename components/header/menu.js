@@ -9,16 +9,16 @@ export default function Menu({ open, items }) {
       initial="closed"
       animate={open && "open"}
       exit="closed"
-      class="bg-black text-white absolute left-0 top-0 w-full h-screen font-sans px-10 md:hidden pt-20">
+      class="bg-black text-white  w-full  font-sans px-10 md:hidden pt-20">
       <motion.ul
         variants={stagger}
-        class="flex flex-col justify-start h-5/6 overflow-hidden ">
+        class="flex flex-col justify-start overflow-hidden ">
         {items.map(({ route, url }, index) => {
           return (
             <motion.li
               key={index}
               variants={slideInLeft}
-              class="menu-overlay-item text-white text-6xl  md:text-7xl pt-10  ">
+              class="menu-overlay-item text-white text-1xl  md:text-2xl  ">
               {route}
             </motion.li>
           );

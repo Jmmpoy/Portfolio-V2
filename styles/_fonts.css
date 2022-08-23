@@ -98,3 +98,61 @@ FUTURA
   font-style: normal;
   font-display: swap;
 }
+
+/*****
+******
+FOUNDERS
+******
+******
+*/
+
+@font-face {
+  font-family: "Founders";
+  src: url("../public/fonts/FoundersGrotesk/WOFF/FoundersGrotesk-Regular.woff2")
+      format("woff2"),
+    url("../public/fonts/FoundersGrotesk/WOFF/FoundersGrotesk-Regular.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FoundersLight";
+  src: url("../public/fonts/FoundersGrotesk/WOFF/FoundersGrotesk-Light.woff2")
+      format("woff2"),
+    url("../public/fonts/FoundersGrotesk/WOFF/FoundersGrotesk-Light.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*****
+******
+IBM
+******
+******
+*/
+
+@font-face {
+  font-family: "IBM";
+  src: url("../public/fonts/IBM Plex Mono/woff2/IBMPlexMono-Light.woff2")
+      format("woff2"),
+    url("../public/fonts/IBM Plex Mono/woff/IBMPlexMono-Light.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBMLight";
+  src: url("../public/fonts/IBM Plex Mono/woff2/IBMPlexMono-ExtraLight.woff2")
+      format("woff2"),
+    url("../public/fonts/IBM Plex Mono/woff/IBMPlexMono-ExtraLight.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

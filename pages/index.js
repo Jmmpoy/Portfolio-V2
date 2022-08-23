@@ -31,8 +31,6 @@ export default function Home() {
                 {/* HERO SECTION */}
                 <Hero />
                 <Content />
-                <Services />
-                <Contact />
                 <Footer />
               </m.div>
             </LazyMotion>

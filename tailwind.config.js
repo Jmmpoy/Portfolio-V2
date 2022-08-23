@@ -11,6 +11,10 @@ module.exports = {
       neueRegular: ["Neue-Regular"],
       neueBold: ["Neue-Bold"],
       futuraLight: ["Futura-Light"],
+      foundersLight: ["FoundersLight"],
+      founders: ["Founders"],
+      ibm: ["IBM"],
+      ibmLight: ["IBMLight"],
     },
     screens: {
       xsm: "400px",
@@ -25,7 +29,7 @@ module.exports = {
       colors: {
         black: "#000",
         white: "#FFF",
-        gray: "fbae17",
+        gray: "#888888",
         palette: {
           blue: "#105099",
           light: "#EAE9E5",
