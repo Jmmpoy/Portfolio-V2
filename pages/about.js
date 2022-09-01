@@ -12,181 +12,19 @@ import { NextSeo } from "next-seo";
 export default function About() {
   const containerRef = useRef(null);
   return (
-    <Layout>
-      <NextSeo title="About" />
-      <LocomotiveScrollProvider
-        options={{ smooth: true, lerp: 0.05 }}
-        containerRef={containerRef}
-        watch={[]}>
-        <div data-scroll-container ref={containerRef} id="scroll-container">
-          <div data-scroll-section>
-            <Header />
-
-            <LazyMotion features={domAnimation}>
-              <m.div initial="initial" animate="enter" exit="exit">
-                <m.main
-                  variants={fade}
-                  className="mb-12 md:mb-16 xl:mb-24 pt-24 md:pt-20">
-                  <Container>
-                    <article>
-                      <h1 className="font-bold text-7xl md:text-3xl xl:text-7xl mb-4">
-                        Next x Tailwind x Motion x Locomotive
-                      </h1>
-                      <div className="content max-w-3xl mb-4">
-                        <h2>Some example content</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate.
-                        </p>
-
-                        <p>
-                          Velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-
-                        <h2>Some example content</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate.
-                        </p>
-
-                        <p>
-                          Velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-
-                        <h2>Some example content</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate.
-                        </p>
-
-                        <p>
-                          Velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-
-                        <h2>Some example content</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate.
-                        </p>
-
-                        <p>
-                          Velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-
-                        <h2>Some example content</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate.
-                        </p>
-
-                        <p>
-                          Velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-
-                        <h2>Some example content</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate.
-                        </p>
-
-                        <p>
-                          Velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-
-                        <h2>Some example content</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate.
-                        </p>
-
-                        <p>
-                          Velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-
-                        <h2>Some example content</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate.
-                        </p>
-
-                        <p>
-                          Velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-                      </div>
-
-                      <FancyLink
-                        destination="/"
-                        a11yText="Navigate to the home page"
-                        label="Home Page"
-                      />
-                    </article>
-                  </Container>
-                </m.main>
-
-                <m.div variants={fade}>
-                  <Footer />
-                </m.div>
-              </m.div>
-            </LazyMotion>
-          </div>
+    <Container extraClasses="Content-Container  h-screen py-12 overflow-auto  md:overflow-hidden  ">
+      <div class="grid  h-full  md:grid-cols-2  ">
+        <div class="text-sm font-founders col-start-2 flex flex-col justify-center w-4/5 mx-auto md:m-0 md:w-full ">
+          <p class="text-2xl font-foundersLight">
+            I’m a freelance Designer, Director based in Stockholm, Sweden.
+            Currently @ Nike Technology Innovation. My passion lies in art
+            direction, branding, typography, Interface/ux & system design,
+            motion and technology. Previously, I worked at Ri, AKQA, RG/A,
+            Google Creative Lab, Unit9, MediaMonks, Wieden + Kennedy and Waste
+            Creative.
+          </p>
         </div>
-      </LocomotiveScrollProvider>
-    </Layout>
+      </div>
+    </Container>
   );
 }

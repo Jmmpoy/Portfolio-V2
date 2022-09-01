@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className="mb-4">
       <Container>
-        <div className="border-t  py-4">
+        <div className="py-4">
           <div className="flex space-x-2 mb-1 md:mb-0">
             {items.map((item, index) => {
               return (

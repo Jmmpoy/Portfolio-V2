@@ -19,7 +19,7 @@ export default function Header() {
   const [open, setOpen] = useCycle(false, true);
   const menuItems = [
     { route: "Projects,", url: "/projects" },
-    { route: "Infos", url: "/infos" },
+    { route: "Infos", url: "/about" },
   ];
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function Header() {
 
   return (
     <header
-      className="bg-white fixed  w-full  flex flex-col justify-center pt-2"
+      className="bg-white fixed  w-full  flex flex-col justify-center pt-2 z-10"
       data-scroll
       data-scroll-sticky
       data-scroll-target="#scroll-container">

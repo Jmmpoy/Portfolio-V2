@@ -25,7 +25,6 @@ export default function Home() {
         watch={[]}>
         <div data-scroll-container ref={containerRef} id="scroll-container">
           <div data-scroll-section>
-            <Header />
             <LazyMotion features={domAnimation}>
               <m.div initial="initial" animate="enter" exit="exit">
                 {/* HERO SECTION */}
