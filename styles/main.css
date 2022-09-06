@@ -110,6 +110,16 @@ p {
       font-size: 7vw;
     }
   }
+
+  .arrow {
+    opacity: 0%;
+    transition: all;
+    transition-duration: 800ms;
+  }
+
+  .project:hover > .arrow {
+    opacity: 100%;
+  }
 }
 
 @layer utilities {
