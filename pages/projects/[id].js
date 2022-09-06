@@ -8,7 +8,6 @@ import data from "../../api.js";
 
 export default function Project({ project }) {
   console.log("project", project);
-  
 
   return (
     <Container extraClasses="Content-Container relative  h-screen py-12 overflow-auto  md:overflow-hidden  ">
@@ -25,11 +24,13 @@ export default function Project({ project }) {
             {project.year}
           </p>
         </div>
+
         <div className="  mt-20 w-5/5  md:mt-0  md:min-w-[200px] ">
           {project && (
             <Image
               src={project.url}
               blurDataURL={project.blurDataURL}
+              placeholder="blur"
               alt={project.name}
               width={460}
               height={258}
@@ -37,22 +38,6 @@ export default function Project({ project }) {
             />
           )}
         </div>
-        {/* <Link href="/">
-          <a className="self-center mt-16 pb-4 w-6 md:mt-0 p-0">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
-            </svg>
-          </a>
-        </Link> */}
       </div>
     </Container>
   );
