@@ -30,6 +30,10 @@ module.exports = {
         black: "#000",
         white: "#FFF",
         gray: "#888888",
+        orange: "#f77e5e",
+        blue: "#2677bb",
+        cyan: "#1aa9bc",
+        fushia: "#de3d83",
         palette: {
           blue: "#105099",
           light: "#EAE9E5",

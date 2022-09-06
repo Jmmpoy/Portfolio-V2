@@ -2,34 +2,33 @@ import React from "react";
 import Container from "./container";
 import Link from "next/link";
 import Image from "next/image";
-import data from "../data.js";
+import data from "../api.js";
 
 export default function content() {
-  console.log(data);
   const ROUTE_PROJECT_ID = "projects/[id]";
+
+  console.log("data", data.data);
+  // console.log("api", api);
 
   return (
     <Container extraClasses="Content-Container   py-12   lg:py-32">
       <p class="text-[12px] text-gray font-founders ">Selected projects</p>
-      <div class="grid h-full gap-y-16 md:grid-cols-2  ">
+
+      <div class=" h-full ">
         {data.map((project, index) => {
           return (
             <div
               key={`project-${project.id}`}
-              class=" max-w-lg text-sm uppercase relative grayscale-[90%] hover:grayscale-0 transition duration-500">
+              class={`  border-t-[0.2px] border-gray  h-24 md:h-32 flex flex-col justify-center text-sm uppercase relative text-black hover:text-gray  transition duration-700`}>
               <Link
                 href={{
                   pathname: ROUTE_PROJECT_ID,
                   query: project,
                 }}
                 as={`/projects/${project.name}`}>
-                <a>
-                  <img
-                    src={project.url.src}
-                    loading="lazy"
-                    alt={project.name}
-                    class="h-full  "
-                  />
+                <a
+                  className={`  text-5xl xsm:text-6xl sm:text-7xl md:text-8xl font-founders tracking-tight hover:text-${project.color}  `}>
+                  {project.name}
                 </a>
               </Link>
             </div>
@@ -38,16 +37,4 @@ export default function content() {
       </div>
     </Container>
   );
-}
-
-{
-  /* <a className="flex">
-  <Image
-    src={project.url}
-    blurDataURL={project.url.blurDataURL}
-    loading="lazy"
-    placeholder="blur"
-    alt={project.name}
-  />
-</a>; */
 }
