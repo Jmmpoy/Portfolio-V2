@@ -114,11 +114,34 @@ p {
   .arrow {
     opacity: 0%;
     transition: all;
-    transition-duration: 800ms;
+    transition-duration: 100ms;
   }
 
   .project:hover > .arrow {
     opacity: 100%;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+
+  .image-container > div {
+    position: unset !important;
+  }
+
+  .image-container > span > span {
+    display: none !important;
+  }
+
+  .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+
+  .project-image-card > span > span {
+    display: none !important;
   }
 }
 
