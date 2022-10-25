@@ -1,4 +1,6 @@
 import Container from "@/components/container";
+import { motion } from "framer-motion";
+import { delayedFade } from "@/helpers/transitions";
 
 export default function Footer() {
   const items = [
@@ -10,22 +12,27 @@ export default function Footer() {
     { title: "Instagram", link: "https://www.instagram.com/mrblanpain/" },
   ];
   return (
-    <footer className="mb-4">
+    <footer className="mb-4 ">
       <Container>
         <div className="py-4">
-          <div className="flex space-x-2 mb-1 md:mb-0">
+          <motion.div
+            className="flex space-x-2 mb-1 md:mb-0"
+            variants={delayedFade}
+            initial="initial"
+            animate="enter"
+            exit="exit">
             {items.map((item, index) => {
               return (
                 <>
-                  <a
+                  <motion.a
                     href={item.link}
                     className="hover:text-gray-500 focus:text-gray-500 uppercase text-[12px] font-founders ">
                     {item.title}
-                  </a>
+                  </motion.a>
                 </>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </Container>
     </footer>
