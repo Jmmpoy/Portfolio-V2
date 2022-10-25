@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <Layout class="no-scrollbar">
-      <NextSeo title="Home" />
+      <NextSeo title="Mpoy Jean-Marc" description="Développeur Front-End" />
       <LocomotiveScrollProvider
         options={{ smooth: true, lerp: 0.09 }}
         containerRef={containerRef}
