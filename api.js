@@ -1,48 +1,89 @@
-import three from "./public/assets/350lab.png";
-import kodamer from "./public/assets/kodamer.png";
-import filmo from "./public/assets/filmo.png";
-import canal from "./public/assets/canal.png";
+import filmo1 from "./public/assets/Projects/Filmo/filmo-1.png";
+import filmo2 from "./public/assets/Projects/Filmo/filmo-2.png";
+import canal1 from "./public/assets/Projects/myCanal/canal-1.png";
+import canal2 from "./public/assets/Projects/myCanal/canal-2.png";
+
+import elow1 from "./public/assets/Projects/Elow/elow-1.PNG";
+import elow2 from "./public/assets/Projects/Elow/elow-2.png";
+import soundcharts1 from "./public/assets/Projects/Soundcharts/soundcharts-1.png";
+import soundcharts2 from "./public/assets/Projects/Soundcharts/soundcharts-2.png";
 
 const data = [
   {
     id: 1,
-    name: "350lab",
-    url: three,
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed",
-    role: "Front End Developer",
-    year: "2020-Now",
-    color: "blue",
+    name: "MyCanal ",
+    primaryImage: canal1,
+    secondaryImage: canal2,
+    description: [
+      {
+        id: 1,
+        text: "Développment de l'application myCanal",
+      },
+      {
+        id: 2,
+        text: "sur Windows et Xbox.",
+      },
+    ],
+    role: "Front End Developement ",
+    year: "2020 - Now",
+    link: "https://www.canalplus.com/",
   },
   {
     id: 2,
-    name: "Kodamer",
-    url: kodamer,
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed",
+    name: "FilmoTv",
+    primaryImage: filmo1,
+    secondaryImage: filmo2,
+    description: [
+      {
+        id: 1,
+        text: "Développment de l'application mobile FilmoTV",
+      },
+      {
+        id: 2,
+        text: "sur Android et IOS.",
+      },
+    ],
     role: "Front End Developer",
     year: "2020-Now",
-    color: "orange",
+    link: "https://www.filmotv.fr/",
   },
   {
     id: 3,
-    name: "MyCanal",
-    url: canal,
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed",
+    name: "Soundcharts",
+    primaryImage: soundcharts1,
+    secondaryImage: soundcharts2,
+    description: [
+      {
+        id: 1,
+        text: "Développment du site web et de l'application",
+      },
+      {
+        id: 2,
+        text: "Soundcharts sur Ios et Android",
+      },
+    ],
     role: "Front End Developer",
     year: "2020-Now",
-    color: "fushia",
+    link: "https://soundcharts.com/",
   },
   {
     id: 4,
-    name: "FilmoTv",
-    url: filmo,
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed",
+    name: "Elow",
+    primaryImage: elow1,
+    secondaryImage: elow2,
+    description: [
+      {
+        id: 1,
+        text: "Application permettant de mesurer la",
+      },
+      {
+        id: 2,
+        text: "consommation énergétique de son PC ",
+      },
+    ],
     role: "Front End Developer",
     year: "2020-Now",
-    color: "cyan",
+    link: "https://elow.energy/fr/",
   },
 ];
 
