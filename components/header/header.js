@@ -14,13 +14,12 @@ import {
   useAnimation,
   useCycle,
 } from "framer-motion";
+import { delayedFade } from "@/helpers/transitions";
+import DateTime from "../dateTime";
 
 export default function Header() {
   const [open, setOpen] = useCycle(false, true);
-  const menuItems = [
-    { route: "Projects,", url: "/projects" },
-    { route: "Infos", url: "/about" },
-  ];
+  const menuItems = [{ route: "Infos", url: "/about" }];
 
   useEffect(() => {
     if (open) {
@@ -57,20 +56,20 @@ export default function Header() {
       data-scroll-sticky
       data-scroll-target="#scroll-container">
       <Container extraClasses="Header-Section ">
-        <div class="flex flex-col  h-full sm:justify-between   sm:flex-row">
+        <motion.div class="flex flex-col  h-full sm:justify-between   sm:flex-row">
           <AnimateSharedLayout>
             <Navigation items={menuItems} />
           </AnimateSharedLayout>
 
-          <ul className=" hidden  sm:block sm:basis-1/2">
-            <li className="uppercase text-sm font-founders  ">
-              front end developer
-            </li>
-            <li className="uppercase text-sm font-founders text-gray">
-              Nantes, France
-            </li>
-          </ul>
-        </div>
+          <motion.ul
+            variants={delayedFade}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            className=" hidden  sm:block sm:basis-1/2">
+            <DateTime />
+          </motion.ul>
+        </motion.div>
       </Container>
     </header>
   );
