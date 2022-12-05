@@ -206,6 +206,7 @@ export default function Project({ project }) {
 
   const ProjectImages = ({ image, secondaryImage }) => {
     console.log("image", image);
+    let hasBlurDataUrl = image.blurDataURL != null ? image : ``;
 
     return (
       <motion.div
@@ -218,7 +219,7 @@ export default function Project({ project }) {
           <Image
             src={image}
             blurDataURL={project.blurDataURL}
-            placeholder={``}
+            placeholder={hasBlurDataUrl}
             alt={project.name}
             class=" min-w-[320px]  image basis-full"
           />
@@ -245,8 +246,8 @@ export default function Project({ project }) {
         <Title
           animateDelay="0.2"
           animateDuration="1.5"
-          exitDelay="0.3"
-          exitDuration="0.8"
+          exitDelay=".7"
+          exitDuration=".7"
           classes="text-5xl xsm:text-6xl sm:text-7xl font-foundersLight tracking-tight"
         />
         <ProjectInfos

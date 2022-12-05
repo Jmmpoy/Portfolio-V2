@@ -66,6 +66,7 @@ export default function About() {
 
   return (
     <Container extraClasses="Content-Container  h-screen py-12 overflow-auto  md:overflow-hidden">
+      <NextSeo title="A Propos" description="Développeur Front-End" />
       <motion.div class="grid  h-full grid-cols-1   md:grid-cols-2 md:bg-blue-500 ">
         <motion.div class="text-sm font-founders  flex flex-col justify-center w-full md:col-start-2  md:m-0 ">
           <motion.div
