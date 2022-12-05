@@ -20,7 +20,7 @@ Neue Hass Grotesk
     url("../public/fonts/Neue/NeueHaasGroteskDisplay-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -30,7 +30,7 @@ Neue Hass Grotesk
     url("../public/fonts/Neue/NeueHaasGroteskDisplay-Reg.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -40,7 +40,7 @@ Neue Hass Grotesk
     url("../public/fonts/Neue/NeueHaasGroteskDisplay-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -50,7 +50,7 @@ Neue Hass Grotesk
     url("../public/fonts/Neue/NeueHaasGroteskDisplay-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -61,7 +61,7 @@ Neue Hass Grotesk
       format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -71,7 +71,7 @@ Neue Hass Grotesk
     url("../public/fonts/Neue/NeueHaasGroteskDisplay-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 /*****
@@ -87,7 +87,7 @@ FUTURA
     url("../public/fonts/Futura/FuturaPT-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -96,7 +96,7 @@ FUTURA
     url("../public/fonts/Futura/FuturaPT-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 /*****
@@ -114,7 +114,7 @@ FOUNDERS
       format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -125,7 +125,7 @@ FOUNDERS
       format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 /*****
@@ -143,7 +143,7 @@ IBM
       format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -154,5 +154,5 @@ IBM
       format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
