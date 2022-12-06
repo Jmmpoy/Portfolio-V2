@@ -17,6 +17,7 @@ export default function Project({ project }) {
     classes,
   }) => {
     return (
+      
       <motion.p
         initial={{ y: 100 }}
         animate={{
@@ -243,13 +244,15 @@ export default function Project({ project }) {
   return (
     <Container extraClasses="Content-Container relative  h-screen py-12 overflow-auto   ">
       <motion.div className="flex flex-col  overflow-hidden   mt-12 mb-12 md:grid md:grid-cols-2   md:mt-36">
-        <Title
-          animateDelay="0.2"
-          animateDuration="1.5"
-          exitDelay=".7"
-          exitDuration=".7"
-          classes="text-5xl xsm:text-6xl sm:text-7xl font-foundersLight tracking-tight"
-        />
+        <span className="flex flex-col  overflow-hidden">
+          <Title
+            animateDelay="0.2"
+            animateDuration="1.5"
+            exitDelay=".7"
+            exitDuration="1"
+            classes="text-5xl xsm:text-6xl sm:text-7xl font-foundersLight tracking-tight"
+          />
+        </span>
         <ProjectInfos
           titleStyle="text-sm text-gray "
           contentStyle="text-xl font-foundersLight "
