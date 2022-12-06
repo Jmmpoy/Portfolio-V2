@@ -44,7 +44,7 @@ export default function content() {
         animate="enter"
         exit="exit"
         class="text-[16px] text-gray font-foundersLight ">
-        Selected projects
+        Projets
       </motion.p>
       <motion.div class="h-full mt-4">
         {data.map((project, index) => {

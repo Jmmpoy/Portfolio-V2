@@ -10,6 +10,13 @@ export default function Hero() {
     { id: 3, text: "based in Paris" },
     { id: 4, text: "*Curently working at Ucaya" },
   ];
+
+  const frenchContent = [
+    { id: 1, text: "Mpoy Jean-Marc" },
+    { id: 2, text: "— développeur front end" },
+    { id: 3, text: "basé à Paris" },
+    { id: 4, text: "*Travaille actuellement chez Ucaya" },
+  ];
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -40,7 +47,7 @@ export default function Hero() {
             initial="hidden"
             animate="show"
             exit="exit">
-            {content.map((item) => {
+            {frenchContent.map((item) => {
               const isGray = item.id === 3 ? "text-gray" : "text-black";
               const isSecondLine = item.id === 2;
               const currentStatus = item.id === 4;
@@ -67,7 +74,7 @@ export default function Hero() {
                       }}
                       key={item.id}
                       className="text-[10px] font-foundersLight">
-                      *Curently working at Ucaya
+                      {item.text}
                     </motion.p>
                   ) : (
                     <motion.li

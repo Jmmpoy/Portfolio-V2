@@ -17,15 +17,15 @@ const data = [
     description: [
       {
         id: 1,
-        text: "Développment de l'application myCanal",
+        text: "Development of the myCanal application",
       },
       {
         id: 2,
-        text: "sur Windows et Xbox.",
+        text: "on Windows and Xbox.",
       },
     ],
-    role: "Développeur Front-End",
-    year: "2020 - Aujourd'hui",
+    role: "Front End Developement ",
+    year: "2020 - Now",
     link: "https://www.canalplus.com/",
   },
   {
@@ -36,15 +36,15 @@ const data = [
     description: [
       {
         id: 1,
-        text: "Développment de l'application mobile FilmoTV",
+        text: "Development of FilmoTv mobile application",
       },
       {
         id: 2,
-        text: "sur Android et IOS.",
+        text: "on Android and IOS.",
       },
     ],
-    role: "Développeur Front-End",
-    year: "2020 - Aujourd'hui",
+    role: "Front End Developer",
+    year: "2020-Now",
     link: "https://www.filmotv.fr/",
   },
   {
@@ -55,15 +55,15 @@ const data = [
     description: [
       {
         id: 1,
-        text: "Développment du site web et de l'application",
+        text: "Development of Soundcharts website and mobile application",
       },
       {
         id: 2,
-        text: "Soundcharts sur Ios et Android",
+        text: "on Ios and Android",
       },
     ],
-    role: "Développeur Front-End",
-    year: "2020 - Aujourd'hui",
+    role: "Front End Developer",
+    year: "2020-Now",
     link: "https://soundcharts.com/",
   },
   {
@@ -74,15 +74,15 @@ const data = [
     description: [
       {
         id: 1,
-        text: "Application permettant de mesurer la",
+        text: "Development of an application to measure the",
       },
       {
         id: 2,
-        text: "consommation énergétique de son PC",
+        text: "computers power consumptions",
       },
     ],
-    role: "Développeur Front-End",
-    year: "2020 - Aujourd'hui",
+    role: "Front End Developer",
+    year: "2020-Now",
     link: "https://elow.energy/fr/",
   },
 ];

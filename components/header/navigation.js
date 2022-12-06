@@ -15,7 +15,7 @@ export default function Navigation({ items, activeIndex, setActiveIndex }) {
             animate="enter"
             exit="exit"
             className="uppercase text-sm self-center font-founders cursor-pointer">
-            Home
+            Accueil
           </motion.a>
         </Link>
         <motion.div

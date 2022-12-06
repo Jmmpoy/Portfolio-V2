@@ -67,7 +67,7 @@ export default function Project({ project }) {
                 },
               }}
               className={titleStyle}>
-              Role
+              Rôle
             </motion.p>
           </div>
           <div className="overflow-hidden">
@@ -115,7 +115,7 @@ export default function Project({ project }) {
                 },
               }}
               className={titleStyle}>
-              Year
+              Année
             </motion.p>
           </div>
           <div className="overflow-hidden">
