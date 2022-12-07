@@ -7,14 +7,14 @@ export default function Hero() {
   const content = [
     { id: 1, text: "Mpoy Jean-Marc" },
     { id: 2, text: "— front end developer" },
-    { id: 3, text: "based in Paris" },
+    { id: 3, text: "based in Nantes" },
     { id: 4, text: "*Curently working at Ucaya" },
   ];
 
   const frenchContent = [
     { id: 1, text: "Mpoy Jean-Marc" },
-    { id: 2, text: "— développeur front end" },
-    { id: 3, text: "basé à Paris" },
+    { id: 2, text: "— développeur web" },
+    { id: 3, text: "basé à Nantes" },
     { id: 4, text: "*Travaille actuellement chez Ucaya" },
   ];
   const container = {
