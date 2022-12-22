@@ -4,7 +4,6 @@ import Header from "@/components/header/header";
 import Hero from "@/components/hero";
 import Services from "@/components/services";
 import Content from "@/components/content";
-import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Container from "@/components/container";
 import FancyLink from "@/components/fancyLink";
