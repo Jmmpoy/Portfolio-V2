@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import Container from "./container";
 import Link from "next/link";
-import Image from "next/image";
 import data from "../api.js";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { delayedFade, fade } from "@/helpers/transitions";
+import { delayedFade } from "@/helpers/transitions";
 
 export default function content() {
   function FadeInWhenVisible({ children }) {

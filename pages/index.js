@@ -18,7 +18,10 @@ export default function Home() {
 
   return (
     <Layout class="no-scrollbar">
-      <NextSeo title="Mpoy Jean-Marc" description="Développeur Front-End" />
+      <NextSeo
+        title="Mpoy Jean-Marc — Développeur Front-End"
+        description="Mpoy Jean-Marc est un développeur spécialisé dans le mouvement et l'interaction. En tant qu'indépendant, il travaille avec des entreprises, des agences, des startups et des particuliers."
+      />
       <LocomotiveScrollProvider
         options={{ smooth: true, lerp: 0.09 }}
         containerRef={containerRef}

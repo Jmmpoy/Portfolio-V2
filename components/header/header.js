@@ -5,7 +5,6 @@ import OverlayMenu from "./menu";
 import Link from "next/link";
 import Burger from "./burger";
 import Logo from "@/components/header/logo";
-
 import { useState, useEffect } from "react";
 import {
   motion,

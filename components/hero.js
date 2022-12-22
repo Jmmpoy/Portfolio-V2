@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Container from "@/components/container";
-import { fade, stagger, slideInLeft } from "@/helpers/transitions";
 
 export default function Hero() {
-  const content = [
-    { id: 1, text: "Mpoy Jean-Marc" },
-    { id: 2, text: "— front end developer" },
-    { id: 3, text: "based in Nantes" },
-    { id: 4, text: "*Curently working at Ucaya" },
-  ];
+  // const content = [
+  //   { id: 1, text: "Mpoy Jean-Marc" },
+  //   { id: 2, text: "— front end developer" },
+  //   { id: 3, text: "based in Nantes" },
+  //   { id: 4, text: "*Curently working at Ucaya" },
+  // ];
 
   const frenchContent = [
     { id: 1, text: "Mpoy Jean-Marc" },
@@ -40,7 +39,7 @@ export default function Hero() {
 
   return (
     <Container extraClasses="Hero-Container relative ">
-      <main class=" h-[65vh] flex flex-col justify-center">
+      <main className=" h-[65vh] flex flex-col justify-center">
         <motion.div>
           <motion.ul
             variants={container}
@@ -96,7 +95,7 @@ export default function Hero() {
                         },
                       }}
                       key={item.id}
-                      class={` ${isGray} hero-font-size  mb-0 font-neueLight uppercase   xsm:text-3xl sm:mb-3   sm:text-5xl`}>
+                      className={` ${isGray} hero-font-size  mb-0 font-neueLight uppercase   xsm:text-3xl sm:mb-3   sm:text-5xl`}>
                       {item.text}
                     </motion.li>
                   )}
