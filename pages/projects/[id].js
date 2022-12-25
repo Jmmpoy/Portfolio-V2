@@ -156,11 +156,10 @@ export default function Project({ project }) {
         className="mt-9 md:mt-40">
         {/* Description */}
         <motion.div className="mb-8">
-          {project.description.map((item) => {
-            console.log(item);
+          {project.description.map((item, index) => {
             const isGray = item.id === 3 ? "text-gray" : "text-black";
             return (
-              <div className="overflow-hidden">
+              <div key={index} className="overflow-hidden">
                 <motion.p
                   initial={{ y: `${40 * item.id}` }}
                   animate={{
@@ -207,9 +206,6 @@ export default function Project({ project }) {
   };
 
   const ProjectImages = ({ image, secondaryImage }) => {
-    console.log("image", image);
-    let hasBlurDataUrl = image.blurDataURL != null ? image : ``;
-
     return (
       <motion.div
         variants={fade}
@@ -268,7 +264,6 @@ export default function Project({ project }) {
 }
 
 export async function getStaticProps({ params }) {
-  console.log("params", params);
   const projects = data.filter((p) => p.id.toString() === params.id);
   return {
     props: { project: projects[0] },
@@ -279,7 +274,6 @@ export async function getStaticPaths() {
   const paths = data.map((project) => ({
     params: { id: project.id.toString() },
   }));
-  console.log(paths);
   return {
     paths,
     fallback: false, // can also be true or 'blocking'

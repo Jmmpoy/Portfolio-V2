@@ -3,7 +3,7 @@ import filmo2 from "./public/assets/Projects/Filmo/filmo-2.png";
 import canal1 from "./public/assets/Projects/myCanal/canal-1.png";
 import canal2 from "./public/assets/Projects/myCanal/canal-2.png";
 
-import elow1 from "./public/assets/Projects/Elow/elow-1.PNG";
+import elow1 from "./public/assets/Projects/Elow/elow-1.png";
 import elow2 from "./public/assets/Projects/Elow/elow-2.png";
 import soundcharts1 from "./public/assets/Projects/Soundcharts/soundcharts-1.png";
 import soundcharts2 from "./public/assets/Projects/Soundcharts/soundcharts-2.png";

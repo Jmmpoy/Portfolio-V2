@@ -55,7 +55,7 @@ export default function Header() {
       data-scroll-sticky
       data-scroll-target="#scroll-container">
       <Container extraClasses="Header-Section ">
-        <motion.div class="flex flex-col  h-full sm:justify-between   sm:flex-row">
+        <motion.div className="flex flex-col  h-full sm:justify-between   sm:flex-row">
           <AnimateSharedLayout>
             <Navigation items={menuItems} />
           </AnimateSharedLayout>

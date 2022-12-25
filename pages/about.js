@@ -70,8 +70,8 @@ export default function About() {
         title="A Propos"
         description="Mpoy Jean-Marc est un développeur spécialisé dans le mouvement et l'interaction. En tant qu'indépendant, il travaille avec des entreprises, des agences, des startups et des particuliers."
       />
-      <motion.div class="grid  h-full grid-cols-1   md:grid-cols-2 md:bg-blue-500 ">
-        <motion.div class="text-sm font-founders  flex flex-col justify-center w-full md:col-start-2  md:m-0 ">
+      <motion.div className="grid  h-full grid-cols-1   md:grid-cols-2 md:bg-blue-500 ">
+        <motion.div className="text-sm font-founders  flex flex-col justify-center w-full md:col-start-2  md:m-0 ">
           <motion.div
             variants={delayedFade}
             initial="initial"
@@ -79,7 +79,9 @@ export default function About() {
             exit="exit">
             {presentation.map((item, index) => {
               return (
-                <p class="text-2xl sm:text-[1.6rem] font-neueRegular list-none max-w-lg mb-0">
+                <p
+                  key={index}
+                  class="text-2xl sm:text-[1.6rem] font-neueRegular list-none max-w-lg mb-0">
                   {item.text}
                 </p>
               );
@@ -111,7 +113,7 @@ export default function About() {
                         },
                       }}
                       key={item.id}
-                      class="text-[3.7vw] leading-[25px] xsm:text-[18px]  font-founders list-none sm:leading-7 sm:text-[18px]">
+                      className="text-[3.7vw] leading-[25px] xsm:text-[18px]  font-founders list-none sm:leading-7 sm:text-[18px]">
                       {item.text}
                     </motion.li>
                   </motion.div>
@@ -143,7 +145,7 @@ export default function About() {
                         },
                       }}
                       key={item.id}
-                      class="text-[3.7vw] leading-[25px] xsm:text-[18px]  font-founders list-none sm:leading-7 sm:text-[18px]">
+                      className="text-[3.7vw] leading-[25px] xsm:text-[18px]  font-founders list-none sm:leading-7 sm:text-[18px]">
                       {item.text}
                     </motion.li>
                   </motion.div>

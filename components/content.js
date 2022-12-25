@@ -19,7 +19,7 @@ export default function content() {
 
     return (
       <motion.div
-        class={` project border-t-[0.2px] border-gray  h-24 md:h-32 flex justify-between items-center text-sm uppercase relative text-black hover:text-gray  transition duration-700`}
+        className={` project border-t-[0.2px] border-gray  h-24 md:h-32 flex justify-between items-center text-sm uppercase relative text-black hover:text-gray  transition duration-700`}
         ref={ref}
         animate={controls}
         initial="hidden"
@@ -45,9 +45,8 @@ export default function content() {
         class="text-[16px] text-gray font-foundersLight ">
         Projets
       </motion.p>
-      <motion.div class="h-full mt-4">
+      <motion.div className="h-full mt-4">
         {data.map((project, index) => {
-          console.log(project);
           return (
             <FadeInWhenVisible key={`project-${project.id}`}>
               <Link
@@ -64,12 +63,12 @@ export default function content() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   class="w-10 h-10">
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                   />
                 </svg>

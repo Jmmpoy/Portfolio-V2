@@ -4,7 +4,7 @@ import { fade } from "@/helpers/transitions";
 export default function Logo({ width, src }) {
   return (
     <motion.div
-      class="logo-container"
+      className="logo-container"
       variants={fade}
       initial="initial"
       animate="enter"

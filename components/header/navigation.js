@@ -8,7 +8,7 @@ export default function Navigation({ items, activeIndex, setActiveIndex }) {
   return (
     <motion.nav className="self-baseline flex  xsm:basis-1/2  md:flex items-center w-full  md:w-auto">
       <div className="flex">
-        <Link href="/" class="relative">
+        <Link href="/" className="relative">
           <motion.a
             variants={fade}
             initial="initial"
@@ -31,7 +31,7 @@ export default function Navigation({ items, activeIndex, setActiveIndex }) {
           initial="initial"
           animate="enter"
           exit="exit"
-          class=" flex space-x-2 self-center">
+          className=" flex space-x-2 self-center">
           {items.map(({ route, url }, index) => {
             const isActive = index === activeIndex;
             return (

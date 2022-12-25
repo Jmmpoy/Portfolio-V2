@@ -25,6 +25,7 @@ export default function Footer() {
               return (
                 <>
                   <motion.a
+                    key={index}
                     href={item.link}
                     className="hover:text-gray-500 focus:text-gray-500 uppercase text-[12px] font-founders ">
                     {item.title}

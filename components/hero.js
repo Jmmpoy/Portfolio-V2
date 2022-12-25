@@ -46,12 +46,12 @@ export default function Hero() {
             initial="hidden"
             animate="show"
             exit="exit">
-            {frenchContent.map((item) => {
+            {frenchContent.map((item, index) => {
               const isGray = item.id === 3 ? "text-gray" : "text-black";
               const isSecondLine = item.id === 2;
               const currentStatus = item.id === 4;
               return (
-                <div className="overflow-hidden">
+                <div key={index} className="overflow-hidden">
                   {currentStatus ? (
                     <motion.p
                       initial={{ y: `${70 * item.id}` }}
