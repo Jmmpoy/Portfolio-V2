@@ -4,7 +4,7 @@ import canal1 from "./public/assets/Projects/myCanal/canal-1.png";
 import canal2 from "./public/assets/Projects/myCanal/canal-2.png";
 
 //import elow1 from "./public/assets/Projects/Elow/elow-1.PNG";
-import elow1 from "./public/assets/Projects/Elow/elow-1.png";
+import elow from "./public/assets/Projects/Elow/elow.png";
 import elow2 from "./public/assets/Projects/Elow/elow-2.png";
 import soundcharts1 from "./public/assets/Projects/Soundcharts/soundcharts-1.png";
 import soundcharts2 from "./public/assets/Projects/Soundcharts/soundcharts-2.png";
@@ -70,7 +70,7 @@ const data = [
   {
     id: 4,
     name: "Elow",
-    primaryImage: elow1,
+    primaryImage: elow,
     secondaryImage: elow2,
     description: [
       {
