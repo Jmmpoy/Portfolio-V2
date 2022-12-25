@@ -143,6 +143,18 @@ p {
   .project-image-card > span > span {
     display: none !important;
   }
+
+  .project-image-card {
+    animation: fadeIn 2s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 @layer utilities {
