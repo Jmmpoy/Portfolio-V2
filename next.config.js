@@ -6,6 +6,10 @@ module.exports = {
       "cdn.sanity.io",
     ],
   },
+  compiler: {
+    removeConsole:
+      process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
+  },
   swcMinify: true,
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build
