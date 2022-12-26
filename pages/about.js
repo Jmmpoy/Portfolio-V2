@@ -14,6 +14,58 @@ export default function About() {
   const presentation = [
     {
       id: 1,
+      text: "Mpoy Jean-Marc est un développeur ",
+    },
+
+    {
+      id: 2,
+      text: "front-end basé en France et travaillant  ",
+    },
+    {
+      id: 3,
+      text: "dans l'industrie digitale depuis ",
+    },
+    {
+      id: 4,
+      text: " plus de 3 ans.",
+    },
+  ];
+  const content = [
+    {
+      id: 0,
+      text: "Passionné de design, il se spécialise",
+    },
+    {
+      id: 1,
+      text: "dans les expériences web avec un fort ",
+    },
+    {
+      id: 2,
+      text: "accent pour l'animation et les interactions",
+    },
+  ];
+  const content2 = [
+    {
+      id: 3,
+      text: "En tant que développeur, il a eu ",
+    },
+    {
+      id: 4,
+      text: "l'opportunité de travailler avec",
+    },
+    {
+      id: 5,
+      text: "un panel de clients dont Microsoft, ",
+    },
+    {
+      id: 6,
+      text: "Canal+ , Soundcharts et FilmoTv.",
+    },
+  ];
+
+  const presentationEng = [
+    {
+      id: 1,
       text: "Mpoy Jean-Marc is a front-end",
     },
 
@@ -30,7 +82,7 @@ export default function About() {
       text: "industry for more than 8 years.",
     },
   ];
-  const content = [
+  const contentEng = [
     {
       id: 0,
       text: "Passionate about design he speciales in ",
@@ -44,8 +96,7 @@ export default function About() {
       text: " animation and interaction.",
     },
   ];
-
-  const content2 = [
+  const content2Eng = [
     {
       id: 3,
       text: "As a front end developer, he had the",
