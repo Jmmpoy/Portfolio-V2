@@ -111,6 +111,12 @@ p {
     }
   }
 
+  .hero-404-font-size {
+    @media (max-width: 425px) {
+      font-size: 6vw;
+    }
+  }
+
   .arrow {
     opacity: 0%;
     transition: all;
