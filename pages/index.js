@@ -11,8 +11,15 @@ import { fade } from "@/helpers/transitions";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { NextSeo } from "next-seo";
+import { data } from "api";
 
-export default function Home() {
+export async function getStaticProps() {
+  return {
+    props: { data: data }, // will be passed to the page component as props
+  };
+}
+
+export default function Home({ data }) {
   const containerRef = useRef(null);
 
   return (
@@ -31,7 +38,7 @@ export default function Home() {
               <m.div initial="initial" animate="enter" exit="exit">
                 {/* HERO SECTION */}
                 <Hero />
-                <Content />
+                <Content data={data} />
                 <Footer />
               </m.div>
             </LazyMotion>

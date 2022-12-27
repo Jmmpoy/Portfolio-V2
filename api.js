@@ -9,7 +9,7 @@ import elow2 from "./public/assets/Projects/Elow/elow-2.png";
 import soundcharts1 from "./public/assets/Projects/Soundcharts/soundcharts-1.png";
 import soundcharts2 from "./public/assets/Projects/Soundcharts/soundcharts-2.png";
 
-const data = [
+export const data = [
   {
     id: 1,
     name: "MyCanal ",
@@ -87,5 +87,3 @@ const data = [
     link: "https://elow.energy/fr/",
   },
 ];
-
-export default data;

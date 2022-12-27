@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import Container from "./container";
 import Link from "next/link";
-import data from "../api.js";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { delayedFade } from "@/helpers/transitions";
 
-export default function content() {
+export default function content({ data }) {
   function FadeInWhenVisible({ children }) {
     const controls = useAnimation();
     const [ref, inView] = useInView({ margin: "70px" });
