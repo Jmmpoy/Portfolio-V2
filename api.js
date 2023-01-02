@@ -2,6 +2,8 @@ import filmo1 from "./public/assets/Projects/Filmo/filmo-1.png";
 import filmo2 from "./public/assets/Projects/Filmo/filmo-2.png";
 import canal1 from "./public/assets/Projects/myCanal/canal-1.png";
 import canal2 from "./public/assets/Projects/myCanal/canal-2.png";
+
+//import elow1 from "./public/assets/Projects/Elow/elow-1.PNG";
 import elow from "./public/assets/Projects/Elow/elow.png";
 import elow2 from "./public/assets/Projects/Elow/elow-2.png";
 import soundcharts1 from "./public/assets/Projects/Soundcharts/soundcharts-1.png";
@@ -9,7 +11,7 @@ import soundcharts2 from "./public/assets/Projects/Soundcharts/soundcharts-2.png
 import fiftyLab from "./public/assets/Projects/350lab/350lab.png";
 import fiftyLab2 from "./public/assets/Projects/350lab/350lab-2.png";
 
-export const data = [
+const data = [
   {
     id: 1,
     name: "MyCanal ",
@@ -106,3 +108,5 @@ export const data = [
     link: "https://www.350lab.com/",
   },
 ];
+
+export default data;

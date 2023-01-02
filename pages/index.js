@@ -11,7 +11,7 @@ import { fade } from "@/helpers/transitions";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { NextSeo } from "next-seo";
-import { data } from "api";
+import data from "api";
 
 export async function getStaticProps() {
   return {

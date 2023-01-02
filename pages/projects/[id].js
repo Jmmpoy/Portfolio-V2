@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Container from "../../components/container";
-import { data } from "../../api.js";
+import data from "../../api.js";
 import { motion } from "framer-motion";
 import { delayedFade, fade } from "@/helpers/transitions";
 
