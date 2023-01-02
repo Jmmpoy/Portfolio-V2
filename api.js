@@ -2,8 +2,6 @@ import filmo1 from "./public/assets/Projects/Filmo/filmo-1.png";
 import filmo2 from "./public/assets/Projects/Filmo/filmo-2.png";
 import canal1 from "./public/assets/Projects/myCanal/canal-1.png";
 import canal2 from "./public/assets/Projects/myCanal/canal-2.png";
-
-//import elow1 from "./public/assets/Projects/Elow/elow-1.PNG";
 import elow from "./public/assets/Projects/Elow/elow.png";
 import elow2 from "./public/assets/Projects/Elow/elow-2.png";
 import soundcharts1 from "./public/assets/Projects/Soundcharts/soundcharts-1.png";
@@ -104,7 +102,7 @@ export const data = [
       },
     ],
     role: "Développeur Front-End - Ui/Ux",
-    year: "2023",
+    year: "2022- Aujourd'hui",
     link: "https://www.350lab.com/",
   },
 ];

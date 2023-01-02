@@ -5,13 +5,7 @@ import Link from "next/link";
 import { fade } from "@/helpers/transitions";
 
 export default function Hero({ message }) {
-  // const content = [
-  //   { id: 1, text: "Mpoy Jean-Marc" },
-  //   { id: 2, text: "— front end developer" },
-  //   { id: 3, text: "based in Nantes" },
-  //   { id: 4, text: "*Curently working at Ucaya" },
-  // ];
-
+  const [HeroAnimationIsDone, SetHeroAnimationIsDone] = useState(false);
   const frenchContent = [
     { id: 1, text: "Mpoy Jean-Marc" },
     { id: 2, text: "— développeur web" },
@@ -36,8 +30,6 @@ export default function Hero({ message }) {
       },
     },
   };
-
-  const [HeroAnimationIsDone, SetHeroAnimationIsDone] = useState(false);
 
   return (
     <Container extraClasses="Hero-Container relative ">
