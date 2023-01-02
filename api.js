@@ -11,7 +11,7 @@ import soundcharts2 from "./public/assets/Projects/Soundcharts/soundcharts-2.png
 import fiftyLab from "./public/assets/Projects/350lab/350lab.png";
 import fiftyLab2 from "./public/assets/Projects/350lab/350lab-2.png";
 
-const data = [
+export const data = [
   {
     id: 1,
     name: "MyCanal ",
@@ -108,5 +108,3 @@ const data = [
     link: "https://www.350lab.com/",
   },
 ];
-
-export default data;
