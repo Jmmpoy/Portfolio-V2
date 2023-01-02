@@ -8,6 +8,8 @@ import elow from "./public/assets/Projects/Elow/elow.png";
 import elow2 from "./public/assets/Projects/Elow/elow-2.png";
 import soundcharts1 from "./public/assets/Projects/Soundcharts/soundcharts-1.png";
 import soundcharts2 from "./public/assets/Projects/Soundcharts/soundcharts-2.png";
+import fiftyLab from "./public/assets/Projects/350lab/350lab.png";
+import fiftyLab2 from "./public/assets/Projects/350lab/350lab-2.png";
 
 const data = [
   {
@@ -85,6 +87,25 @@ const data = [
     role: "Développeur Front-End",
     year: "2020 - Aujourd'hui",
     link: "https://elow.energy/fr/",
+  },
+  {
+    id: 5,
+    name: "350lab",
+    primaryImage: fiftyLab,
+    secondaryImage: fiftyLab2,
+    description: [
+      {
+        id: 1,
+        text: "Développement de la landing page",
+      },
+      {
+        id: 2,
+        text: "du studio digital 350lab.",
+      },
+    ],
+    role: "Développeur Front-End - Ui/Ux",
+    year: "2023",
+    link: "https://www.350lab.com/",
   },
 ];
 

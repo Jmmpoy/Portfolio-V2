@@ -212,7 +212,7 @@ export default function Project({ project }) {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="image-container min-h-[420px] mt-52 mx-auto  py-20 px-12  flex flex-col  gap-y-32  justify-center bg-black sm: gap-x-20 md:flex-row md:p-24 ">
+        className="image-container min-h-[420px] mt-52 mx-auto  py-20 px-12  flex flex-col  gap-y-32  justify-center  sm: gap-x-20 md:flex-row md:p-24 ">
         <motion.div className="basis-full project-image-card ">
           <Image
             src={image}
