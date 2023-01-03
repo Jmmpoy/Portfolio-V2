@@ -12,7 +12,7 @@ export default function Footer() {
     { title: "Instagram", link: "https://www.instagram.com/mrblanpain/" },
   ];
   return (
-    <footer className="mb-4 ">
+    <footer className="mb-0 w-full fixed bottom-0 bg-white ">
       <Container>
         <div className="py-4">
           <motion.div
