@@ -30,8 +30,6 @@ export default function Hero({ message }) {
     },
   };
 
-  const [HeroAnimationIsDone, SetHeroAnimationIsDone] = useState(false);
-
   return (
     <Container extraClasses="Hero-Container relative">
       <main className=" h-[65vh] flex flex-col justify-center px-6 bg-red-300 sm:bg-red-800">

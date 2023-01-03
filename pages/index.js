@@ -19,7 +19,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ data }) {
+export default function Home({data}) {
   const containerRef = useRef(null);
 
   return (
