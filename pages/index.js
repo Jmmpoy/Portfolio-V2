@@ -30,7 +30,6 @@ export default function Home() {
           <div data-scroll-section>
             <LazyMotion features={domAnimation}>
               <m.div initial="initial" animate="enter" exit="exit">
-                {/* HERO SECTION */}
                 <Hero />
                 <Content data={data} />
               </m.div>

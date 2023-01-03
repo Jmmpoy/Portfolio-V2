@@ -36,7 +36,7 @@ export default function Project({ project }) {
               ease: "easeInOut",
             },
           }}
-          className="text-5xl xsm:text-6xl sm:text-7xl md:text-8xl font-neueRegular tracking-tight ">
+          className={classes}>
           {project.name}
         </motion.p>
       </span>
@@ -154,7 +154,6 @@ export default function Project({ project }) {
         animate="enter"
         exit="exit"
         className="mt-9 md:mt-40">
-        {/* Description */}
         <motion.div className="mb-8">
           {project.description.map((item, index) => {
             const isGray = item.id === 3 ? "text-gray" : "text-black";
@@ -179,7 +178,7 @@ export default function Project({ project }) {
                     },
                   }}
                   key={item.id}
-                  class="text-[3vw] sm:text-xl  md:text-2xl font-foundersLight">
+                  class="text-[3vw] sm:text-xl  md:text-2xl font-neueRegular">
                   {item.text}
                 </motion.p>
               </div>
@@ -187,7 +186,7 @@ export default function Project({ project }) {
           })}
         </motion.div>
         <div className="flex ">
-          <a className="underline font-foundersLight" href={project.link}>
+          <a className="underline font-neueRegular" href={project.link}>
             Visiter le site
           </a>
           <div className="flex flex-col justify-end">
@@ -212,7 +211,7 @@ export default function Project({ project }) {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="image-container min-h-[420px]  mx-auto  sm:mt-52 py-20 px-12  flex flex-col  gap-y-24  justify-center  sm: gap-x-20 md:flex-row md:p-24 ">
+        className="image-container min-h-[420px]  mx-auto mt-24 md:mt-48 py-16 px-12  flex flex-col  gap-y-24  justify-center  sm: gap-x-20 md:flex-row md:p-24 ">
         <motion.div className="basis-full project-image-card max-w-[700px] ">
           <Image
             src={image}
@@ -240,17 +239,17 @@ export default function Project({ project }) {
 
   return (
     <Container extraClasses="Content-Container relative  h-screen py-12">
-      <motion.div className="flex flex-col  overflow-hidden   mt-12 mb-12 md:grid md:grid-cols-2   md:mt-36">
+      <motion.div className="flex flex-col  overflow-hidden   mt-8 mb-12 md:grid md:grid-cols-2   md:mt-24">
         <Title
           animateDelay="0.2"
           animateDuration="1.5"
           exitDelay=".7"
           exitDuration="1"
-          classes="text-5xl xsm:text-6xl sm:text-7xl font-foundersLight tracking-tight"
+          classes="text-5xl xsm:text-6xl sm:text-7xl font-neueRegular tracking-tight"
         />
         <ProjectInfos
-          titleStyle="text-sm text-gray "
-          contentStyle="text-xl font-foundersLight "
+          titleStyle="text-base neueRegular  "
+          contentStyle="text-xl font-neueRegular "
         />
       </motion.div>
 

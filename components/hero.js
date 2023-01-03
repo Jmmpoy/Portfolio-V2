@@ -66,7 +66,7 @@ export default function Hero({ message }) {
                           },
                         }}
                         key={item.id}
-                        className="text-[10px] font-foundersLight">
+                        className="text-base font-foundersLight">
                         {item.text}
                       </motion.p>
                     ) : (

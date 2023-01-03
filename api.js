@@ -97,7 +97,7 @@ const data = [
     description: [
       {
         id: 1,
-        text: "Développemnt et Design de la landing page",
+        text: "Développement et Design de la landing page",
       },
       {
         id: 2,
