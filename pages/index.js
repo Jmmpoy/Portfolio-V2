@@ -13,13 +13,7 @@ import { LazyMotion, domAnimation, m } from "framer-motion";
 import { NextSeo } from "next-seo";
 import data from "api";
 
-export async function getStaticProps() {
-  return {
-    props: { data: data },
-  };
-}
-
-export default function Home({data}) {
+export default function Home() {
   const containerRef = useRef(null);
 
   return (
