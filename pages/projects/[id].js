@@ -212,8 +212,8 @@ export default function Project({ project }) {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="image-container min-h-[420px] mt-52 mx-auto  py-20 px-12  flex flex-col  gap-y-32  justify-center bg-black sm: gap-x-20 md:flex-row md:p-24 ">
-        <motion.div className="basis-full project-image-card ">
+        className="image-container min-h-[420px]  mx-auto  sm:mt-52 py-20 px-12  flex flex-col  gap-y-24  justify-center  sm: gap-x-20 md:flex-row md:p-24 ">
+        <motion.div className="basis-full project-image-card max-w-[700px] ">
           <Image
             src={image}
             blurDataURL={image.blurDataURL}
@@ -223,7 +223,7 @@ export default function Project({ project }) {
           />
         </motion.div>
 
-        <motion.div className="basis-full project-image-card ">
+        <motion.div className="basis-full project-image-card max-w-[700px] ">
           {secondaryImage && (
             <Image
               src={secondaryImage}
@@ -239,7 +239,7 @@ export default function Project({ project }) {
   };
 
   return (
-    <Container extraClasses="Content-Container relative  h-screen py-12 overflow-auto   ">
+    <Container extraClasses="Content-Container relative  h-screen py-12">
       <motion.div className="flex flex-col  overflow-hidden   mt-12 mb-12 md:grid md:grid-cols-2   md:mt-36">
         <Title
           animateDelay="0.2"

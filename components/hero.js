@@ -5,13 +5,6 @@ import Link from "next/link";
 import { fade } from "@/helpers/transitions";
 
 export default function Hero({ message }) {
-  // const content = [
-  //   { id: 1, text: "Mpoy Jean-Marc" },
-  //   { id: 2, text: "— front end developer" },
-  //   { id: 3, text: "based in Nantes" },
-  //   { id: 4, text: "*Curently working at Ucaya" },
-  // ];
-
   const frenchContent = [
     { id: 1, text: "Mpoy Jean-Marc" },
     { id: 2, text: "— développeur web" },
@@ -40,8 +33,8 @@ export default function Hero({ message }) {
   const [HeroAnimationIsDone, SetHeroAnimationIsDone] = useState(false);
 
   return (
-    <Container extraClasses="Hero-Container relative ">
-      <main className=" h-[65vh] flex flex-col justify-center">
+    <Container extraClasses="Hero-Container relative">
+      <main className=" h-[65vh] flex flex-col justify-center px-6 bg-red-300 sm:bg-red-800">
         <motion.div>
           {message == null ? (
             <motion.ul
@@ -98,7 +91,7 @@ export default function Hero({ message }) {
                           },
                         }}
                         key={item.id}
-                        className={` ${isGray} hero-font-size  mb-0 font-neueLight uppercase   xsm:text-3xl sm:mb-3   sm:text-5xl`}>
+                        className={` ${isGray} hero-font-size  mb-0 font-neueLight uppercase   xsm:text-3xl sm:mb-3 sm:text-4xl   md:text-5xl lg:text-6xl`}>
                         {item.text}
                       </motion.li>
                     )}
