@@ -5,8 +5,3 @@ I have designed my portfolio to showcase my expertise in creating visually appea
 Through my portfolio, you'll be able to get a sense of my design aesthetic and development capabilities, as well as my ability to work collaboratively and deliver high-quality projects.
 
 
-## Screenshots
-
-![App Screenshot](![image](https://user-images.githubusercontent.com/40600748/229084937-9425f04a-6765-4c93-8668-80c6bab856b8.png)
-)
-
