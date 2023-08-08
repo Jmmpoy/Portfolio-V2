@@ -8,7 +8,7 @@ export default function Hero({ message }) {
   const frenchContent = [
     { id: 1, text: "Mpoy Jean-Marc" },
     { id: 2, text: "— développeur web" },
-    { id: 3, text: "basé à Nantes" },
+    { id: 3, text: "basé à Paris" },
     { id: 4, text: "*Travaille actuellement chez Ucaya" },
   ];
   const container = {
