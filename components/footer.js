@@ -4,7 +4,7 @@ import { delayedFade } from "@/helpers/transitions";
 
 export default function Footer() {
   const items = [
-    { title: "Email", link: "mailto:jmmpoy@@info.com" },
+    { title: "Email", link: "mailto:jmmpoy@gmail.com" },
     {
       title: "Twitter",
       link: "https://twitter.com/jmmpoy",
