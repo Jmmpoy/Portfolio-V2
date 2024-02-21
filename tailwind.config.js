@@ -9,12 +9,17 @@ module.exports = {
       mono: ["Lucida Console", "Courier", "monospace"],
       neueLight: ["Neue-Light"],
       neueRegular: ["Neue-Regular"],
+      neueMedium: ["Neue-Medium"],
       neueBold: ["Neue-Bold"],
       futuraLight: ["Futura-Light"],
       foundersLight: ["FoundersLight"],
       founders: ["Founders"],
       ibm: ["IBM"],
       ibmLight: ["IBMLight"],
+      sohneBuch:["Sohne-Buch"],
+      sohneFett:["Sohne-Fett"],
+      sohneKraftig:["Sohne-Kraftig"],
+      sohneHalbfett:["Sohne-Halbfett"]
     },
     screens: {
       xsm: "400px",
@@ -28,7 +33,7 @@ module.exports = {
     extend: {
       colors: {
         black: "#000",
-        white: "#f5f3ef",
+        white: "#fcfbfa",
         gray: "#888888",
         orange: "#f77e5e",
         blue: "#2677bb",

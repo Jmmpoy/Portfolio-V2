@@ -12,10 +12,7 @@ function DateTime() {
   });
   return (
     <>
-      <li className="uppercase text-sm font-founders  ">
-        {date.toLocaleTimeString()}
-      </li>
-      <li className="uppercase text-sm font-founders text-gray">
+      <li className="uppercase text-sm font-sohneBuch text-gray">
         {`© ${date.getFullYear()}`}
       </li>
     </>

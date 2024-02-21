@@ -154,6 +154,10 @@ p {
   .project-image-card {
     animation: fadeIn 2s;
   }
+
+  .grid-element span{
+    /* height: 100% !important; */
+  }
   @keyframes fadeIn {
     0% {
       opacity: 0;

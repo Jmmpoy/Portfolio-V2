@@ -18,7 +18,7 @@ import DateTime from "../dateTime";
 
 export default function Header() {
   const [open, setOpen] = useCycle(false, true);
-  const menuItems = [{ route: "Infos", url: "/about" }];
+  const menuItems = [{ route: "Infos", url: "/about" },{ route: "Contact", url: "/contact" }];
 
   useEffect(() => {
     if (open) {
@@ -57,7 +57,7 @@ export default function Header() {
       <Container extraClasses="Header-Section ">
         <motion.div className="flex flex-col  h-full sm:justify-between   sm:flex-row">
           <AnimateSharedLayout>
-            <Navigation items={menuItems} />
+            <Navigation  items={menuItems} />
           </AnimateSharedLayout>
 
           <motion.ul
@@ -67,6 +67,7 @@ export default function Header() {
             exit="exit"
             className=" hidden  sm:block sm:basis-1/2">
             <DateTime />
+            
           </motion.ul>
         </motion.div>
       </Container>

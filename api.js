@@ -11,13 +11,14 @@ import soundcharts2 from "./public/assets/Projects/Soundcharts/soundcharts-2.png
 
 import fiftyLab from "./public/assets/Projects/350lab/350lab.png";
 import fiftylab2 from "./public/assets/Projects/350lab/350lab-2.png";
+import test from "@/public/assets/Projects/350lab/Untitled.png"
 
 const data = [
   {
     id: 1,
     name: "MyCanal ",
-    primaryImage: canal1,
-    secondaryImage: canal2,
+    primaryImage: test,
+    secondaryImage: test,
     description: [
       {
         id: 1,
@@ -35,8 +36,8 @@ const data = [
   {
     id: 2,
     name: "FilmoTv",
-    primaryImage: filmo1,
-    secondaryImage: filmo2,
+    primaryImage: test,
+    secondaryImage: test,
     description: [
       {
         id: 1,
@@ -54,8 +55,8 @@ const data = [
   {
     id: 3,
     name: "Soundcharts",
-    primaryImage: soundcharts1,
-    secondaryImage: soundcharts2,
+    primaryImage: test,
+    secondaryImage: test,
     description: [
       {
         id: 1,
@@ -73,8 +74,8 @@ const data = [
   {
     id: 4,
     name: "Elow",
-    primaryImage: elow,
-    secondaryImage: elow2,
+    primaryImage: test,
+    secondaryImage: test,
     description: [
       {
         id: 1,
@@ -92,8 +93,27 @@ const data = [
   {
     id: 5,
     name: "350lab",
-    primaryImage: fiftyLab,
-    secondaryImage: fiftylab2,
+    primaryImage: test,
+    secondaryImage: test,
+    description: [
+      {
+        id: 1,
+        text: "Développement et Design de la landing page",
+      },
+      {
+        id: 2,
+        text: "du studio 350lab",
+      },
+    ],
+    role: "Développeur Front-End - Ui/Ux",
+    year: "2022 - Aujourd'hui",
+    link: "https://www.350lab.com/",
+  },
+  {
+    id: 6,
+    name: "Clara Onuegbu",
+    primaryImage: test,
+    secondaryImage: test,
     description: [
       {
         id: 1,
