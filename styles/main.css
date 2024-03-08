@@ -13,6 +13,11 @@
 @import "tailwindcss/utilities";
 
 /* Simple defaults */
+
+*{
+  scroll-behavior: smooth;
+}
+
 body {
   @apply font-sans antialiased text-black bg-white;
 }
@@ -128,7 +133,7 @@ p {
   }
 
   .image-container {
-    background: #ebe7df;
+    background: #F5F5F5;
     width: 100%;
   }
 
@@ -155,8 +160,8 @@ p {
     animation: fadeIn 2s;
   }
 
-  .grid-element span{
-    /* height: 100% !important; */
+  .grid-element > span {
+     height: 100%  !important; 
   }
   @keyframes fadeIn {
     0% {
