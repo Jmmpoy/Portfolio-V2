@@ -4,12 +4,8 @@ import { delayedFade } from "@/helpers/transitions";
 
 export default function Footer() {
   const items = [
-    { title: "Email", link: "mailto:jmmpoy@gmail.com" },
-    {
-      title: "Twitter",
-      link: "https://twitter.com/jmmpoy",
-    },
-    { title: "Instagram", link: "https://www.instagram.com/mrblanpain/" },
+    { title: "Mail", link: "mailto:jmmpoy@gmail.com" },
+    { title: "Linkedin", link: "https://www.linkedin.com/in/jean-marc-mpoy/" },
   ];
   return (
     <footer className="mb-0 w-full fixed bottom-0 bg-white ">
@@ -27,7 +23,7 @@ export default function Footer() {
                   <motion.a
                     key={index}
                     href={item.link}
-                    className="hover:text-gray-500 focus:text-gray-500 uppercase text-[12px] font-sohneBuch ">
+                    className="hover:text-gray-500 focus:text-gray-500 uppercase text-[10px] font-sohneBuch ">
                     {item.title}
                   </motion.a>
                 </>

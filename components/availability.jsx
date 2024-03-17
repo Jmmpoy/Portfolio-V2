@@ -13,6 +13,13 @@ const Availability = () => {
           ease: "easeInOut",
         },
       }}
+      exit={{
+        opacity: 0,
+        transition: { 
+          duration: .5,
+          ease: [0.7, 0, 0.3, 1] 
+        },
+      }}
       className="text-left sm:text-center  font-sohneBuch uppercase text-xs"
     >
       Available for work

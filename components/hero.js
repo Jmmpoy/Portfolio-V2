@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Container from "@/components/container";
 import Link from "next/link";
 import { fade } from "@/helpers/transitions";
+import ScrollForMore from "@/components/scrollForMore";
+import Availability from "@/components/availability";
 
 export default function Hero({ message }) {
   const frenchContent = [
@@ -29,7 +31,6 @@ export default function Hero({ message }) {
     },
   };
 
-
   const Lines = () => {
     return (
       <>
@@ -38,55 +39,37 @@ export default function Hero({ message }) {
           const currentStatus = item.id === 4;
           return (
             <div key={index} className="overflow-hidden">
-              {currentStatus ? (
-                <motion.p
-                  initial={{ y: `${70 * item.id}` }}
-                  animate={{
-                    y: 0,
-                    transition: {
-                      delay: 3,
-                      duration: 1,
-                      ease: "easeInOut",
-                    },
-                  }}
-                  exit={{
-                    y: 100,
-                    transition: {
-                      delay: `${0.1 * item.id}`,
-                      duration: 0.8,
-                      ease: "easeInOut",
-                    },
-                  }}
-                  key={item.id}
-                  className=" text-[10px] mt-2 xsm:text-xs font-sohneBuch"
-                >
-                  {item.text}
-                </motion.p>
-              ) : (
-                <motion.li
-                  initial={{ y: `${70 * item.id}` }}
-                  animate={{
-                    y: 0,
-                    transition: {
-                      delay: `${0.2 * item.id}`,
-                      duration: 1,
-                      ease: "easeInOut",
-                    },
-                  }}
-                  exit={{
-                    y: 100,
-                    transition: {
-                      delay: `${0.1 * item.id}`,
-                      duration: 0.8,
-                      ease: "easeInOut",
-                    },
-                  }}
-                  key={item.id}
-                  className={` ${isGray} hero-font-size  mb-0 uppercase font-sohneBuch tracking-tighter xsm:text-3xl   sm:mb-1 sm:text-4xl   md:text-6xl lg:text-7xl`}
-                >
-                  {item.text}
-                </motion.li>
-              )}
+              <motion.li
+                initial={{
+                  y: `${70 * item.id}`,
+                  rotate: -10 * item.id,
+                  opacity: 0,
+                }}
+                animate={{
+                  y: 0,
+                  rotate: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.2 + item.id * 0.05, // Use index for a more uniform stagger effect
+                    duration: 1.2, // Slightly faster duration
+                    ease: [0.39,0.57,0.56,1], // Custom cubic bezier for a smooth start and end
+                  },
+                }}
+                // }}
+                exit={{
+                  y: 100,
+                  transition: {
+                    delay: `${0.1 * item.id}`,
+                    duration: 0.8,
+                    ease: "easeInOut",
+                  },
+                }}
+                key={item.id}
+                style={{ transformOrigin: "center right" }}
+                className={` ${isGray} hero-font-size  mb-0 uppercase font-sohneKraftig tracking-tighter xsm:text-3xl   sm:mb-1 sm:text-4xl   md:text-6xl lg:text-7xl`}
+              >
+                {item.text}
+              </motion.li>
             </div>
           );
         })}
@@ -94,51 +77,24 @@ export default function Hero({ message }) {
     );
   };
 
-  const NoPage = () => {
-    return (
-      <motion.div variants={fade} initial="initial" animate="enter" exit="exit">
-        <motion.p
-          className={`hero-font-size  mb-0 font-neueLight uppercase   xsm:text-3xl sm:mb-3   sm:text-5xl`}
-        >
-          Cette page n'existe pas.
-        </motion.p>
-        <Link href="/">
-          <a
-            className={` hero-font-size mb-0 font-neueLight uppercase xsm:text-3xl sm:mb-3 sm:text-5xl`}
-          >
-            Cliquez ici.
-          </a>
-        </Link>
-      </motion.div>
-    );
-  };
-
   return (
     <Container extraClasses="Hero-Container relative">
-      <main className="flex flex-col justify-center  relative ">
+      <main className="flex flex-col justify-center relative ">
         <motion.div className="mt-32 pb-24">
-          {message == null ? (
-           <> <motion.ul
-           variants={container}
-           initial="hidden"
-           animate="show"
-           exit="exit"
-         >
-           <Lines />
-         </motion.ul>
-         </>
-          ) : (
-            <NoPage />
-          )}
-          
-          
+          <motion.ul
+            variants={container}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+          >
+            <Lines />
+          </motion.ul>
         </motion.div>
-        <div className="absolute bottom-0 flex w-full justify-between">
-        <p className="text-center  font-sohneBuch uppercase text-xs">Available for work</p>
-      <p className="text-center   font-sohneBuch uppercase text-xs">Scroll for more ↓</p>
-      </div>
+        <div className="absolute bottom-0 flex sm:w-full justify-between flex-col sm:flex-row">
+          <Availability />
+          <ScrollForMore />
+        </div>
       </main>
-      
     </Container>
   );
 }

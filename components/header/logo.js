@@ -9,7 +9,7 @@ export default function Logo({ width, src }) {
       initial="initial"
       animate="enter"
       exit="exit">
-      <Link href="/">
+      <Link scroll={false} href="/">
         <a>
           <svg
             className={width}

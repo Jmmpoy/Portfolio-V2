@@ -8,16 +8,25 @@ import SEO from "@/helpers/seo.config";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+  console.log(pageProps);
+  
 
   return (
     <>
       <DefaultSeo {...SEO} />
 
-      <AnimatePresence>
         <Header />
-        <Component {...pageProps} key={router.asPath} />
+        {/*  AnimatePresence exitBeforeEnter is used to wait for the component to exit before any components mounting, this will prevent pages to crossfade  */}
+        <AnimatePresence
+                mode='wait'
+                initial={false}
+                // onExitComplete={() => setTimeout(() => window.scroll({ top: 0, left: 0, behavior: 'smooth' }))}
+                
+            >
+                <Component {...pageProps} key={router.asPath} />
+            </AnimatePresence>
+       
         <Footer />
-      </AnimatePresence>
     </>
   );
 }

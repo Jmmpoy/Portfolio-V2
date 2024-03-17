@@ -10,7 +10,14 @@ const ScrollForMore = () => {
         transition: {
           delay: 1,
           duration: 1,
-          ease: "easeInOut",
+          ease: [0.7, 0, 0.3, 1], 
+        },
+      }}
+      exit={{
+        opacity: 0,
+        transition: { 
+          duration: .5,
+          ease: [0.7, 0, 0.3, 1] 
         },
       }}
       className="scrollformore-container h-4 group overflow-hidden relative"

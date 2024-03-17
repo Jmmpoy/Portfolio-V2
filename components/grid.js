@@ -3,10 +3,15 @@ import Container from "./container";
 import Link from "next/link";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { delayedFade } from "@/helpers/transitions";
+import { delayedFade,fade } from "@/helpers/transitions";
 import Image from "next/image";
+import NoScrollLink from "./NoScrollLink";
 
 export default function Grid({ data }) {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   function FadeInWhenVisible({ children }) {
     const controls = useAnimation();
     const [ref, inView] = useInView({ margin: "70px" });
@@ -19,7 +24,7 @@ export default function Grid({ data }) {
 
     return (
       <motion.div
-        className="overflow-hidden rounded cursor-pointer"
+        className="overflow-hidden rounded cursor-pointer h-full"
         ref={ref}
         animate={controls}
         initial="hidden"
@@ -37,9 +42,11 @@ export default function Grid({ data }) {
   }
 
   return (
-    <Container extraClasses="Content-Container pb-12 lg:pb-32 mt-8 bg-blue-300">
+    <Container extraClasses=" pb-12 lg:pb-32 mt-8 bg-blue-300">
       
-      <motion.div className=" mt-4 gap-2 grid grid-cols-1   lg:grid-cols-2">
+      <motion.div variants={delayedFade}
+        initial="initial"
+        animate="enter" exit="exit" className=" mt-4 gap-2 grid grid-cols-1 md:grid-cols-2    lg:grid-cols-2">
         {data.map((project) => {
           return (
             <FadeInWhenVisible key={`project-${project.id}`}>
@@ -48,8 +55,9 @@ export default function Grid({ data }) {
                 as={`/projects/${project.id}`}
                 passHref
                 className="link h-full"
+                scroll={false}
               >
-                <div className="relative text-gray text-opacity-20 ease-in-out duration-300 hover:text-opacity-90">
+                <motion.div className="grid-element h-full relative text-gray text-opacity-20 ease-in-out duration-300 hover:text-opacity-90">
                   <Image
                     src={project.primaryImage}
                     blurDataURL={project.primaryImage.blurDataURL}
@@ -62,7 +70,7 @@ export default function Grid({ data }) {
                   <p className=" z-10  absolute bottom-8 left-8 transform  font-sohneKraftig text-sm">
                     {project.name}
                   </p>
-                </div>
+                </motion.div>
               </Link>
             </FadeInWhenVisible>
           );
