@@ -26,8 +26,6 @@ export default function Home() {
             <motion.div className="relative bg-beige">
               <Hero />
               <Grid data={data} />
-              <Grid data={data} />
-              <Grid data={data} />
             </motion.div>
           </Layout>
         </div>
