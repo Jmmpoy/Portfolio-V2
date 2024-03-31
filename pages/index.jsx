@@ -12,11 +12,11 @@ export default function Home() {
   const containerRef = useRef(null);
   return (
     <LocomotiveScrollProvider
-      options={{ smooth: true, lerp: 0.09 }}
+      options={{ smooth: true, lerp: 0.04 }}
       containerRef={containerRef}
       watch={[]}
     >
-      <div data-scroll-container ref={containerRef} id="scroll-container">
+      <div data-scroll-container ref={containerRef} data-scroll-speed={50} data-scroll-delay={2} id="scroll-container">
         <div data-scroll-section>
           <Layout className="no-scrollbar relative">
             <NextSeo
@@ -25,6 +25,8 @@ export default function Home() {
             />
             <motion.div className="relative bg-beige">
               <Hero />
+              <Grid data={data} />
+              <Grid data={data} />
               <Grid data={data} />
             </motion.div>
           </Layout>
