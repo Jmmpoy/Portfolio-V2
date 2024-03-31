@@ -1,11 +1,10 @@
 // TODO : SWITCH FROM GRID TO LSIT VIEW
 import Layout from "@/components/layout";
 import Hero from "@/components/hero";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { NextSeo } from "next-seo";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Grid from "@/components/grid";
-import Content from "@/components/content";
 import data from "api";
 import { useRef } from "react";
 
