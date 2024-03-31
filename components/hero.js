@@ -12,6 +12,13 @@ export default function Hero({ message }) {
     { id: 2, text: "Développeur Front End" },
     { id: 3, text: "Basé à Paris." },
   ];
+
+  const errorContent = [
+    { id: 1, text: "Cette page" },
+    { id: 2, text: "n'existe pas" },
+  ];
+
+
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -34,10 +41,12 @@ const container = {
   },
 };
 
+const content = message ? errorContent : frenchContent;
+
   const Lines = () => {
     return (
       <>
-        {frenchContent.map((item, index) => {
+        {content.map((item, index) => {
           const isGray = item.id === 3 ? "text-gray" : "text-black";
           return (
             <div key={index} className="overflow-hidden">
@@ -87,14 +96,16 @@ const container = {
             animate="show"
             exit="exit"
           >
-            <Lines />
+            <Lines/>
           </motion.ul>
         </motion.div>
-        <div className="absolute bottom-0 flex sm:w-full justify-between flex-col sm:flex-row">
+       {!message &&  <div className="absolute bottom-0 flex sm:w-full justify-between flex-col sm:flex-row">
           <Availability />
           <ScrollForMore />
-        </div>
+        </div>}
       </main>
+
+      <></>
     </Container>
   );
 }
