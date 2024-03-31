@@ -1,31 +1,41 @@
+// TODO : SWITCH FROM GRID TO LSIT VIEW
 import Layout from "@/components/layout";
 import Hero from "@/components/hero";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { NextSeo } from "next-seo";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Grid from "@/components/grid";
+import Content from "@/components/content";
 import data from "api";
 import { useRef } from "react";
 
-export default function Home() {
 
-  const containerRef = useRef(null);
+
+export default function Home() {
+   const container = useRef(null);
+
   return (
     <LocomotiveScrollProvider
-      options={{ smooth: true, lerp: 0.04 }}
-      containerRef={containerRef}
+      options={{ smooth: true, lerp: 0.1 }}
+      containerRef={container}
       watch={[]}
     >
-      <div data-scroll-container ref={containerRef} data-scroll-speed={50} data-scroll-delay={2} id="scroll-container">
+      <div
+        data-scroll-container
+        data-scroll-speed={20}
+        ref={container}
+        id="scroll-container"
+      >
         <div data-scroll-section>
           <Layout className="no-scrollbar relative">
             <NextSeo
-              title="Mpoy Jean-Marc — Front-End Developer"
-              description="Mpoy Jean-Marc is a developer specializing in movement and interaction. As a freelancer, he works with businesses, agencies, startups, and individuals."
+              title="Mpoy Jean-Marc — Développeur Front-End"
+              description="Jean-Marc Mpoy est un développeur passionné par l'enrichissement de l'expérience utilisateur à travers des interfaces élégantes et interactives. Son travail en freelance avec une diversité de partenaires vise à maximiser l'engagement utilisateur."
             />
+
             <motion.div className="relative bg-beige">
               <Hero />
-              <Grid data={data} />
+              <Grid  data={data} />
             </motion.div>
           </Layout>
         </div>
