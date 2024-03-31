@@ -18,11 +18,11 @@ export default function About() {
     },
     {
       id: 3,
-      text: "dans l'industrie digitale depuis ",
+      text: "dans la tech depuis ",
     },
     {
       id: 4,
-      text: " plus de 3 ans.",
+      text: " plus de 4 ans.",
     },
   ];
   const content = [
@@ -111,12 +111,12 @@ export default function About() {
   ];
 
   return (
-    <Container extraClasses="Content-Container  h-screen py-12 overflow-auto  md:overflow-hidden">
+    <Container extraClasses="Content-Container  h-screen py-12 overflow-hidden">
       <NextSeo
         title="A Propos"
         description="Mpoy Jean-Marc est un développeur spécialisé dans le mouvement et l'interaction. En tant qu'indépendant, il travaille avec des entreprises, des agences, des startups et des particuliers."
       />
-      <motion.div className="grid  h-full grid-cols-1   md:grid-cols-2 md:bg-blue-500 ">
+      <motion.div className="grid  h-full grid-cols-1   md:grid-cols-2 md:bg-blue-500 overflow-hidden ">
         <motion.div className="text-sm font-founders  flex flex-col justify-center w-full md:col-start-2  md:m-0 ">
           <motion.div
             variants={delayedFade}
@@ -127,7 +127,7 @@ export default function About() {
               return (
                 <p
                   key={index}
-                  class="text-2xl sm:text-[1.6rem] font-sohneBuch list-none max-w-lg mb-0">
+                  class="text-[16px] xsm:text-[18px]  sm:text-[1.4rem] font-sohneBuch list-none max-w-lg mb-0">
                   {item.text}
                 </p>
               );
