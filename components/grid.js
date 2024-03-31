@@ -61,7 +61,7 @@ export default function Grid({ data }) {
       
       <motion.div variants={delayedFade}
         initial="initial"
-        animate="enter" exit="exit" className=" mt-4 gap-4 grid grid-cols-1 md:grid-cols-2    lg:grid-cols-3">
+        animate="enter" exit="exit" className=" mt-4 gap-4 grid grid-cols-1 md:grid-cols-2 ">
         {data.map((project) => {
           return (
             <FadeInWhenVisible key={`project-${project.id}`}>
@@ -82,7 +82,7 @@ export default function Grid({ data }) {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className=" hover:opacity-70 hover:blur-[2px] transition ease-in-out duration-500"
                   />
-                  <p className={`z-10  ${project.color}  absolute bottom-4 left-4 transform uppercase  font-sohneKraftig text-sm`}>
+                  <p className={`z-10  ${project.color} opacity-70  absolute bottom-4 left-4 transform uppercase  font-sohneKraftig text-sm`}>
                     {project.name}
                   </p>
                 </motion.div>

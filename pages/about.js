@@ -127,7 +127,7 @@ export default function About() {
               return (
                 <p
                   key={index}
-                  class="text-2xl sm:text-[1.6rem] font-neueRegular list-none max-w-lg mb-0">
+                  class="text-2xl sm:text-[1.6rem] font-sohneBuch list-none max-w-lg mb-0">
                   {item.text}
                 </p>
               );
@@ -159,7 +159,7 @@ export default function About() {
                         },
                       }}
                       key={item.id}
-                      className="text-[3.7vw] leading-[25px] xsm:text-[18px]  font-founders list-none sm:leading-7 sm:text-[18px]">
+                      className="text-[3.7vw] leading-[25px] xsm:text-[18px]  font-sohneBuch list-none sm:leading-7 sm:text-[18px]">
                       {item.text}
                     </motion.li>
                   </motion.div>
@@ -191,7 +191,7 @@ export default function About() {
                         },
                       }}
                       key={item.id}
-                      className="text-[3.7vw] leading-[25px] xsm:text-[18px]  font-founders list-none sm:leading-7 sm:text-[18px]">
+                      className="text-[3.7vw] leading-[25px] xsm:text-[18px]  font-sohneBuch list-none sm:leading-7 sm:text-[18px]">
                       {item.text}
                     </motion.li>
                   </motion.div>
