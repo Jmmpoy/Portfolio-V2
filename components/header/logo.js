@@ -1,7 +1,19 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { fade } from "@/helpers/transitions";
 export default function Logo({ width, src }) {
+
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    // Check if the current path is the root path
+    if (router.pathname === "/") {
+      // Prevent the default link action if already on the homepage
+      e.preventDefault();
+    }
+  };
+
   return (
     <motion.div
       className="logo-container"
@@ -11,7 +23,7 @@ export default function Logo({ width, src }) {
       exit="exit"
     >
       <Link scroll={false} href="/">
-        <a>
+        <a onClick={handleClick}>
           <svg
             className={width}
             version="1.1"

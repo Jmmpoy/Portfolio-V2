@@ -11,36 +11,8 @@ import { delayedFade } from "@/helpers/transitions";
 import DateTime from "../dateTime";
 
 export default function Header() {
-  const [open, setOpen] = useCycle(false, true);
   const menuItems = [{ route: "À Propos", url: "/about" }];
 
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "visible";
-    }
-  }, [open]);
-
-  const asideVariants = {
-    open: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.9,
-        ease: [0.79, 0.14, 0.15, 0.86],
-      },
-    },
-    closed: {
-      x: "-100%",
-      opacity: 0,
-      transition: {
-        duration: 0.9,
-        ease: [0.79, 0.14, 0.15, 0.86],
-        when: "afterChildren",
-      },
-    },
-  };
 
   return (
     <header
