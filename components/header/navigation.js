@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { fade } from "@/helpers/transitions";
+import Logo from '@/components/header/logo';
 export default function Navigation({ items, activeIndex }) {
-  const Logo = () => {
-    return (
-      <Link  href="/" className="relative">
-        <motion.a className="uppercase text-sm self-center font-sohneBuch cursor-pointer">
-          JM.M
-        </motion.a>
-      </Link>
-    );
-  };
+  // const Logo = () => {
+  //   return (
+  //     <Link  href="/" className="relative">
+  //       <motion.a className="uppercase text-sm self-center font-sohneBuch cursor-pointer">
+  //         JM.M
+  //       </motion.a>
+  //     </Link>
+  //   );
+  // };
 
   const Line = () => {
     return (
@@ -52,7 +53,7 @@ export default function Navigation({ items, activeIndex }) {
       className="self-baseline flex  xsm:basis-1/2  md:flex items-center w-full  md:w-auto"
     >
       <div className="flex">
-        <Logo />
+      <Logo width="h-4" />
         <Line />
         <Routes />
       </div>
