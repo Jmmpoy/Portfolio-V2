@@ -30,7 +30,7 @@ export default function Navigation({ items, activeIndex }) {
           return (
             <motion.li
               key={index}
-              class="text-sm uppercase transition  ease-in-out duration-100 hover:text-gray"
+              class="text-xs uppercase transition  ease-in-out duration-100 hover:text-gray"
             >
               <Link scroll={false} href={url} class="relative">
                 <a className="font-sohneBuch">
@@ -53,6 +53,9 @@ export default function Navigation({ items, activeIndex }) {
       className="self-baseline flex  xsm:basis-1/2  md:flex items-center w-full  md:w-auto"
     >
       <div className="flex">
+      {/* <motion.a className="uppercase text-sm self-center font-sohneBuch cursor-pointer">
+           JM.M
+         </motion.a> */}
       <Logo width="h-4" />
         <Line />
         <Routes />
