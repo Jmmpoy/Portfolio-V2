@@ -16,10 +16,11 @@
 
 *{
   scroll-behavior: smooth;
+
 }
 
 body {
-  @apply font-sans antialiased text-black bg-white;
+  @apply font-sans antialiased text-black bg-beige;
 }
 
 h1 {
@@ -52,6 +53,12 @@ p {
 }
 
 @layer components {
+
+  .custom-height-md {
+    @media (min-width: 768px) {
+      height: calc(100vh - 48px);
+    }
+  }
   /* Hero Headline*/
   .hero-container {
     max-width: 1000px;
@@ -172,6 +179,8 @@ p {
     }
   }
 }
+
+
 
 @layer utilities {
   /* Hide scrollbar */

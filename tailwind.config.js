@@ -34,20 +34,9 @@ module.exports = {
       colors: {
         black: "#000",
         white: "#fcfbfa",
+        beige:"#f2eeea",
         gray: "#888888",
-        orange: "#f77e5e",
         blue: "#2677bb",
-        cyan: "#1aa9bc",
-        fushia: "#de3d83",
-        palette: {
-          blue: "#105099",
-          light: "#EAE9E5",
-        },
-        "example-color": {
-          light: "#EAE9E5",
-          DEFAULT: "#d18d67",
-          dark: "#ce8860",
-        },
       },
       height: (theme) => ({
         "50vh": "50vh",

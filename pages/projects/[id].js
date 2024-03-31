@@ -7,16 +7,9 @@ import Container from "../../components/container";
 import data from "../../api.js";
 import { motion } from "framer-motion";
 import { delayedFade, fade } from "@/helpers/transitions";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Project({ project }) {
-  
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
-
-
   const Title = ({
     animateDelay,
     animateDuration,
@@ -25,183 +18,78 @@ export default function Project({ project }) {
     classes,
   }) => {
     return (
-      <motion.div className="flex flex-col-reverse sm:flex-row">
-        <motion.span
-          
-          className=" w-full"
-        >
-          <motion.p className="font-sohneBuch text-[10px] mb-4 sm:mb-0 sm:text-xs uppercase ">
-            {project.tags}
-          </motion.p>
-          <motion.a className={`${classes} relative`} href={project.link}>
-            {project.name}
-          </motion.a>
-        </motion.span>
-        <motion.div
+      <motion.div className="overflow-hidden">
+        <motion.a
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: {
-              duration: 1,
-              ease: "easeInOut",
-            },
+            transition: { delay: 0.7, duration: 0.7, ease: "easeInOut" },
           }}
           exit={{
             opacity: 0,
-            transition: {
-              duration: 0.5,
-              ease: [0.7, 0, 0.3, 1],
-            },
+            transition: { delay: 0.6, duration: 0.7, ease: "easeInOut" },
           }}
-          className="font-sohneBuch text-xs uppercase text-left sm:text-right w-full text-[#373737]"
+          className={`${classes} relative`}
+          href={project.link}
         >
-          {project.year}
-        </motion.div>
+          {project.name}
+        </motion.a>
       </motion.div>
-    );
-  };
-
-  const ProjectInfos = ({ titleStyle, contentStyle }) => {
-    return (
-      <motion.ul className=" mt-9 md:mt-3  overflow-hidden">
-        <motion.li className="flex flex-col justify-evenly">
-          <div className="overflow-hidden">
-            <motion.p
-              initial={{ y: 0 }}
-              animate={{
-                y: 0,
-                transition: {
-                  delay: 1,
-                  duration: 1.5,
-                  ease: "easeInOut",
-                },
-              }}
-              exit={{
-                y: 100,
-                transition: {
-                  delay: 0.3,
-                  duration: 0.8,
-                  ease: "easeInOut",
-                },
-              }}
-              className={titleStyle}
-            >
-              Rôle
-            </motion.p>
-          </div>
-          <div className="overflow-hidden">
-            <motion.p
-              initial={{ y: 0 }}
-              animate={{
-                y: 0,
-                transition: {
-                  delay: 1.5,
-                  duration: 1.5,
-                  ease: "easeInOut",
-                },
-              }}
-              exit={{
-                y: 100,
-                transition: {
-                  delay: 0.7,
-                  duration: 0.8,
-                  ease: "easeInOut",
-                },
-              }}
-              className={contentStyle}
-            >
-              {project.role}
-            </motion.p>
-          </div>
-        </motion.li>
-        <motion.li className="flex flex-col justify-evenly">
-          <div className="overflow-hidden">
-            <motion.p
-              initial={{ y: 0 }}
-              animate={{
-                y: 0,
-                transition: {
-                  delay: 1,
-                  duration: 1.5,
-                  ease: "easeInOut",
-                },
-              }}
-              exit={{
-                y: 100,
-                transition: {
-                  delay: 0.3,
-                  duration: 0.8,
-                  ease: "easeInOut",
-                },
-              }}
-              className={titleStyle}
-            >
-              Année
-            </motion.p>
-          </div>
-          <div className="overflow-hidden">
-            <motion.p
-              initial={{ y: 0 }}
-              animate={{
-                y: 0,
-                transition: {
-                  delay: 1.5,
-                  duration: 1.5,
-                  ease: "easeInOut",
-                },
-              }}
-              exit={{
-                y: 100,
-                transition: {
-                  delay: 0.7,
-                  duration: 0.8,
-                  ease: "easeInOut",
-                },
-              }}
-              className={contentStyle}
-            >
-              {project.year}
-            </motion.p>
-          </div>
-        </motion.li>
-      </motion.ul>
     );
   };
 
   const Description = () => {
     return (
       <motion.div
-        
-        className="mt-8 text-left sm:text-right"
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 0.9, duration: 0.7, ease: "easeInOut" },
+        }}
+        exit={{
+          opacity: 0,
+          transition: { delay: 0.6, duration: 0.7, ease: "easeInOut" },
+        }}
+        className="Description mt-8"
       >
-        <motion.div className="mb-8 ">
-          {project.description.map((item, index) => {
-            const isGray = item.id === 3 ? "text-gray" : "text-black";
-            return (
-              <div key={index} className="overflow-hidden">
-                <motion.p
-                 
-                  key={item.id}
-                  class="text-sm  font-sohneBuch text-[#373737]"
-                >
-                  {item.text}
-                </motion.p>
-              </div>
-            );
-          })}
-        </motion.div>
+        {project.description.map((item, index) => {
+          const isGray = item.id === 3 ? "text-gray" : "text-black";
+          return (
+            <div key={index} className="overflow-hidden">
+              <motion.p
+                key={item.id}
+                class="text-xs  font-sohneBuch text-[#373737]"
+              >
+                {item.text}
+              </motion.p>
+            </div>
+          );
+        })}
       </motion.div>
     );
   };
 
-  const ProjectImages = ({ image, secondaryImage, thirdImage }) => {
+  const ProjectImages = ({
+    image,
+    secondaryImage,
+    thirdImage,
+    fourthImage,
+  }) => {
     return (
       <motion.div
-       
-        className="image-container min-h-[420px]  mx-auto  py-16 px-12  flex flex-col  gap-y-24  justify-center items-center  md:p-24 "
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 0.6, duration: 0.7, ease: "easeInOut" },
+        }}
+        exit={{
+          opacity: 0,
+          transition: { delay: 0.6, duration: 0.7, ease: "easeInOut" },
+        }}
+        className="image-container min-h-[420px] sepia-[10%]  mx-auto flex flex-col  justify-center items-center gap-y-8   "
       >
         {image && (
-          <motion.div className="basis-full project-image-card  ">
+          <motion.div className="basis-full project-image-card   ">
             <Image
               src={image}
               blurDataURL={image.blurDataURL}
@@ -239,45 +127,105 @@ export default function Project({ project }) {
             )}
           </motion.div>
         )}
+
+        {fourthImage && (
+          <motion.div className="basis-full project-image-card  ">
+            {fourthImage && (
+              <Image
+                src={fourthImage}
+                blurDataURL={fourthImage.blurDataURL}
+                placeholder="blur"
+                alt={project.name}
+                class=" min-w-[320px]  image "
+              />
+            )}
+          </motion.div>
+        )}
       </motion.div>
     );
   };
 
-  const projectTitle = [{ id: project.id, text: project.name }];
+  const Dates = () => {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 1.1, duration: 0.7, ease: "easeInOut" },
+        }}
+        exit={{
+          opacity: 0,
+          transition: { delay: 0.6, duration: 0.7, ease: "easeInOut" },
+        }}
+        className="Dates font-sohneBuch text-xs uppercase w-full text-[#373737] "
+      >
+        {project.year}
+      </motion.div>
+    );
+  };
+
+  const Tags = () => {
+    return (
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 1.3, duration: 0.7, ease: "easeInOut" },
+        }}
+        exit={{
+          opacity: 0,
+          transition: { delay: 0.8, duration: 0.7, ease: "easeInOut" },
+        }}
+        className=" Tags font-sohneBuch text-xs mb-4 sm:mb-0 sm:text-xs  "
+      >
+        {project.tags}
+      </motion.p>
+    );
+  };
+
+  const Divider = () => {
+    return (
+      <motion.hr
+        initial={{ width: 0 }}
+        animate={{
+          width: "100%",
+          transition: { duration: 1.3, ease: "easeInOut" },
+        }}
+        exit={{
+          width: 0,
+          transition: { duration: 1.3, ease: "easeInOut" },
+        }}
+        className="border-b-1 border-dashed border-black opacity-20 my-2"
+      />
+    );
+  };
 
   return (
     <>
-      <Container extraClasses="Content-Container relative pt-8 md:py-12">
-        <motion.div initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: {
-              duration: .5,
-              ease: "easeInOut",
-            },
-          }}
-          exit={{
-            opacity: 0,
-            transition: {
-              duration: 0.5,
-              ease: [0.7, 0, 0.3, 1],
-            },
-          }} className="flex flex-col my-16 mb-12 overflow-hidden  md:mt-20">
-          <Title classes="hero-font-size text-5xl mt-8 md:mt-0  mb-0 uppercase font-sohneKraftig tracking-tighter  xsm:text-7xl     md:text-9xl  lg:text-9xl transition duration-300 ease-in-out hover:text-[#505050]" />
-          <Description />
-        </motion.div>
-      </Container>
-      <ProjectImages
-        image={project.primaryImage}
-        secondaryImage={project.secondaryImage}
-        thirdImage={project.thirdImage}
-      />
+      <div className="Content-Container overflow-scroll sm:overflow-hidden relative custom-height-md">
+        <div className="flex flex-col md:flex-row h-full">
+          <Container extraClasses="w-full flex flex-col mt-12 py-12 md:w-1/3">
+            <Title classes="hero-font-size text-4xl s=:text-5xl  mt-8 md:mt-0 mb-0 uppercase font-sohneKraftig tracking-tighter  transition duration-300 ease-in-out hover:text-[#505050]" />
+            <Divider />
+            <div className="flex flex-col grow justify-end">
+              <Description />
+              <Divider />
+              <Dates />
+              <Divider />
+              <Tags />
+            </div>
+          </Container>
 
-      {/* <Description /> */}
-      {/* <ProjectInfos
-        titleStyle="text-base neueRegular  "
-        contentStyle="text-xl font-neueRegular "
-      /> */}
+          <div className="w-full md:mt-12 px-6 py-12 md:px-8 md:w-2/3 overflow-auto">
+            <ProjectImages
+              image={project.primaryImage}
+              secondaryImage={project.secondaryImage}
+              thirdImage={project.thirdImage}
+              fourthImage={project.fourthImage}
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

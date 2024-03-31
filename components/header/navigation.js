@@ -5,7 +5,7 @@ import { fade } from "@/helpers/transitions";
 export default function Navigation({ items, activeIndex }) {
   const Logo = () => {
     return (
-      <Link scroll={false} href="/" className="relative">
+      <Link  href="/" className="relative">
         <motion.a className="uppercase text-sm self-center font-sohneBuch cursor-pointer">
           JM.M
         </motion.a>
@@ -31,7 +31,7 @@ export default function Navigation({ items, activeIndex }) {
               key={index}
               class="text-sm uppercase transition  ease-in-out duration-100 hover:text-gray"
             >
-              <Link href={url} class="relative">
+              <Link scroll={false} href={url} class="relative">
                 <a className="font-sohneBuch">
                   <span>{route}</span>
                 </a>

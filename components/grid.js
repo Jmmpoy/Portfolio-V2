@@ -3,14 +3,29 @@ import Container from "./container";
 import Link from "next/link";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { delayedFade,fade } from "@/helpers/transitions";
 import Image from "next/image";
-import NoScrollLink from "./NoScrollLink";
 
 export default function Grid({ data }) {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+
+  const delayedFade = {
+    initial: { opacity: 0 },
+    enter: {
+      opacity: 1,
+      transition: { 
+        duration: .6, 
+        ease: [0.7, 0, 0.3, 1], 
+        delay: .2 
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: { 
+        duration: .6,
+        ease: [0.7, 0, 0.3, 1] 
+      },
+    },
+  };
+ 
   
   function FadeInWhenVisible({ children }) {
     const controls = useAnimation();
@@ -46,18 +61,18 @@ export default function Grid({ data }) {
       
       <motion.div variants={delayedFade}
         initial="initial"
-        animate="enter" exit="exit" className=" mt-4 gap-2 grid grid-cols-1 md:grid-cols-2    lg:grid-cols-2">
+        animate="enter" exit="exit" className=" mt-4 gap-4 grid grid-cols-1 md:grid-cols-2    lg:grid-cols-3">
         {data.map((project) => {
           return (
             <FadeInWhenVisible key={`project-${project.id}`}>
-              <Link
+              <Link 
+              scroll={false}
                 href={`/projects/[id]`}
                 as={`/projects/${project.id}`}
                 passHref
                 className="link h-full"
-                scroll={false}
               >
-                <motion.div className="grid-element h-full relative text-gray text-opacity-20 ease-in-out duration-300 hover:text-opacity-90">
+                <motion.div className="grid-element sepia-[10%] h-full relative text-opacity-20 ease-in-out duration-300 hover:text-opacity-100">
                   <Image
                     src={project.primaryImage}
                     blurDataURL={project.primaryImage.blurDataURL}
@@ -65,9 +80,9 @@ export default function Grid({ data }) {
                     alt={project.name}
                     objectFit="cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className=" hover:opacity-90 transition ease-in-out duration-700"
+                    className=" hover:opacity-70 hover:blur-[2px] transition ease-in-out duration-500"
                   />
-                  <p className=" z-10  absolute bottom-8 left-8 transform  font-sohneKraftig text-sm">
+                  <p className={`z-10  ${project.color}  absolute bottom-4 left-4 transform uppercase  font-sohneKraftig text-sm`}>
                     {project.name}
                   </p>
                 </motion.div>

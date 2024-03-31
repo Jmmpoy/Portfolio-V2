@@ -8,7 +8,7 @@ export default function Footer() {
     { title: "Linkedin", link: "https://www.linkedin.com/in/jean-marc-mpoy/" },
   ];
   return (
-    <footer className="mb-0 w-full fixed bottom-0 bg-white ">
+    <footer className="mb-0 w-full fixed bottom-0 bg-beige ">
       <Container>
         <div className="py-4">
           <motion.div

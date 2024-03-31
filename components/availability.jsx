@@ -22,7 +22,7 @@ const Availability = () => {
       }}
       className="text-left sm:text-center  font-sohneBuch uppercase text-xs"
     >
-      Available for work
+      Ouvert aux opportunités
     </motion.p>
   );
 };

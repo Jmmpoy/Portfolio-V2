@@ -12,7 +12,7 @@ import DateTime from "../dateTime";
 
 export default function Header() {
   const [open, setOpen] = useCycle(false, true);
-  const menuItems = [{ route: "Contact", url: "/contact" }];
+  const menuItems = [{ route: "À Propos", url: "/about" }];
 
   useEffect(() => {
     if (open) {
@@ -44,7 +44,7 @@ export default function Header() {
 
   return (
     <header
-      className="bg-white fixed  w-full  flex flex-col justify-center pt-2 z-10 h-12"
+      className="bg-beige fixed  w-full  flex flex-col justify-center pt-2 z-10 h-12"
       data-scroll
       data-scroll-sticky
       data-scroll-target="#scroll-container">

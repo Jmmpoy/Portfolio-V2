@@ -27,13 +27,13 @@ const ScrollForMore = () => {
           style={{ transformOrigin: "right center" }}
           className="text-left sm:text-center  origin-center font-sohneBuch uppercase text-xs transition-transform duration-500 ease-in-out will-change-transform group-hover:translate-y-[-20px]"
         >
-          Scroll for more ↓
+          Projets ↓
         </p>
         <p
           style={{ transformOrigin: "left center" }}
           className="text-left sm:text-center origin-left rotate-[20deg] font-sohneBuch uppercase text-xs transition-transform duration-500 ease-in-out will-change-transform group-hover:rotate-[0deg] group-hover:translate-y-[-16px]"
         >
-          Scroll for more ↓
+          Projets ↓
         </p>
       </motion.span>
     </motion.div>
