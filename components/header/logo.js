@@ -8,7 +8,8 @@ export default function Logo({ width, src }) {
       variants={fade}
       initial="initial"
       animate="enter"
-      exit="exit">
+      exit="exit"
+    >
       <Link scroll={false} href="/">
         <a>
           <svg
@@ -19,7 +20,8 @@ export default function Logo({ width, src }) {
             x="0px"
             y="0px"
             viewBox="0 0 20.328 11.412"
-            xmlSpace="preserve">
+            xmlSpace="preserve"
+          >
             <g id="Kose">
               <path
                 d="M12.609,0.195c0.505-0.208,1.08-0.259,1.607-0.105c0.066,0.029,0.135,0.052,0.202,0.08c0.73,0.288,1.336,0.804,1.915,1.32
