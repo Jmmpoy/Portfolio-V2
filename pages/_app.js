@@ -8,8 +8,6 @@ import SEO from "@/helpers/seo.config";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  console.log(pageProps);
-
   return (
     <>
       <DefaultSeo {...SEO} />

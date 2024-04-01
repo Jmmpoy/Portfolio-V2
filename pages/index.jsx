@@ -8,10 +8,8 @@ import Grid from "@/components/grid";
 import data from "api";
 import { useRef } from "react";
 
-
-
 export default function Home() {
-   const container = useRef(null);
+  const container = useRef(null);
 
   return (
     <LocomotiveScrollProvider
@@ -32,10 +30,12 @@ export default function Home() {
               description="Jean-Marc Mpoy est un développeur passionné par l'enrichissement de l'expérience utilisateur à travers des interfaces élégantes et interactives. Son travail en freelance avec une diversité de partenaires vise à maximiser l'engagement utilisateur."
             />
 
-            <motion.div className="relative bg-beige">
-              <Hero />
-              <Grid  data={data} />
-            </motion.div>
+            {data && (
+              <motion.div className="relative bg-beige">
+                <Hero />
+                <Grid data={data} />
+              </motion.div>
+            )}
           </Layout>
         </div>
       </div>

@@ -28,6 +28,7 @@ export  const ProjectImages = ({
               src={image}
               blurDataURL={image.blurDataURL}
               placeholder="blur"
+              priority
               alt={name}
               class=" min-w-[320px]  image basis-full"
             />

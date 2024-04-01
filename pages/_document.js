@@ -25,6 +25,8 @@ export default class MyDocument extends Document {
           />
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+          {/* Preloading key fonts */}
+          <link rel="preload" href="/public/fonts/Sohne/Sohne-Buch.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
         </Head>

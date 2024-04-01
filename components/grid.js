@@ -21,6 +21,7 @@ export default function Grid({ data }) {
     exit: {
       opacity: 0,
       transition: {
+        delay: 0.4,
         duration: 0.6,
         ease: [0.7, 0, 0.3, 1],
       },
@@ -65,7 +66,7 @@ export default function Grid({ data }) {
         exit="exit"
         className=" mt-4 gap-2 grid grid-cols-1 md:grid-cols-2 "
       >
-        {data.map((project) => {
+        {data && data.map((project) => {
           return (
             <FadeInWhenVisible key={`project-${project.id}`}>
               <Link
@@ -80,6 +81,7 @@ export default function Grid({ data }) {
                     src={project.primaryImage}
                     blurDataURL={project.primaryImage.blurDataURL}
                     placeholder="blur"
+                    priority
                     alt={project.name}
                     objectFit="cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

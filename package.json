@@ -1,7 +1,7 @@
 {
-  "name": "next-tailwind-motion",
-  "description": "A simple Next.js starter kit with TailwindCSS (JIT) and Framer Motion preconfigured",
-  "author": "Sam Goddard <hello@samgoddard.co.uk> (https://samgoddard.co.uk)",
+  "name": "Mpoy Jean-Marc portfolio",
+  "description": "My portfolio",
+  "author": "Mpoy Jean-Marc",
   "version": "1.0.0",
   "repository": {
     "type": "git",
@@ -23,8 +23,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "tailwind-config-viewer": "tailwind-config-viewer -o"
+    "start": "next start"
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.46",

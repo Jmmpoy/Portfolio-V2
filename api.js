@@ -1,9 +1,9 @@
-import filmo from "./public/assets/Projects/Filmo/filmo.webp";
-import filmo2 from "./public/assets/Projects/Filmo/filmo2.webp";
-import filmo3 from "./public/assets/Projects/Filmo/filmo3.webp";
+import filmo from "./public/assets/Projects/Filmo/filmo.png";
+import filmo2 from "./public/assets/Projects/Filmo/filmo2.png";
+import filmo3 from "./public/assets/Projects/Filmo/filmo3.png";
 
 import myCanal from "./public/assets/Projects/myCanal/canal.png";
-import myCanal2 from "./public/assets/Projects/myCanal/canal-2.webp";
+import myCanal2 from "./public/assets/Projects/myCanal/canal-2.png";
 import myCanal3 from "./public/assets/Projects/myCanal/canal-3.png";
 import myCanal4 from "./public/assets/Projects/myCanal/canal-4.png";
 
@@ -11,19 +11,17 @@ import soundcharts from "./public/assets/Projects/Soundcharts/soundcharts-1.png"
 import soundcharts2 from "./public/assets/Projects/Soundcharts/soundcharts-2.png";
 import soundcharts3 from "./public/assets/Projects/Soundcharts/soundcharts-3.png";
 
-import fiftyLab from "./public/assets/Projects/350lab/350lab.webp";
-import fiftyLabIpad from "./public/assets/Projects/350lab/350lab-ipad.webp";
-import fiftylab2 from "./public/assets/Projects/350lab/350lab-2.webp";
+import fiftyLab from "./public/assets/Projects/350lab/350lab.png";
+import fiftyLabIpad from "./public/assets/Projects/350lab/350lab-ipad.png";
+import fiftylab2 from "./public/assets/Projects/350lab/350lab-2.png";
 import fiftylab4 from "./public/assets/Projects/350lab/350.png";
 import fiftylab5 from "./public/assets/Projects/350lab/350-2.png";
 import fiftylab6 from "./public/assets/Projects/350lab/350-3.png";
 
-import clara from "@/public/assets/Projects/Clara/clara1.webp"
-import clara2 from "@/public/assets/Projects/Clara/clara-1.png"
-import clara3 from "@/public/assets/Projects/Clara/clara-2.png"
-import clara4 from "@/public/assets/Projects/Clara/clara-3.png"
+import clara from "./public/assets/Projects/Clara/clara-1.png"
+import clara2 from "./public/assets/Projects/Clara/clara-2.png"
+import clara3 from "./public/assets/Projects/Clara/clara-3.png"
 
-import test from "./public/assets/Projects/350lab/350lab.webp"
 
 const data = [
   {
@@ -101,7 +99,6 @@ const data = [
     primaryImage: clara,
     secondaryImage: clara2,
     thirdImage: clara3,
-    fourthImage: clara4,
     description: [
       {
         id: 1,

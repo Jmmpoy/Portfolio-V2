@@ -24,7 +24,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      duration:.3,
+      duration:.7,
       staggerChildren: 0.1,
       delayChildren: 0.2,
     },
@@ -33,8 +33,8 @@ const container = {
     opacity: 0,
     transition: {
       // Inversez l'ordre de disparition des enfants
-      duration:.5,
-      staggerChildren: 0.1,
+      duration:.8,
+      staggerChildren: 0.4,
       staggerDirection: -1, // -1 pour inverser l'ordre
       delayChildren: 0.2,
     },
@@ -68,8 +68,8 @@ const content = message ? errorContent : frenchContent;
                 exit={{
                   y: 100,
                   transition: {
-                    delay: `${0.1 * item.id}`,
-                    duration: 0.5,
+                    delay: 0.2 + item.id * 0.05, // Use index for a more uniform stagger effect
+                    duration: 1.6,
                     ease: [0.33, 1, 0.68, 1],
                   },
                 }}
