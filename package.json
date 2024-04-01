@@ -1,8 +1,15 @@
 {
-  "name": "jm-portfolio",
-  "description": "My portfolio",
-  "author": "Mpoy Jean-Marc",
+  "name": "next-tailwind-motion",
+  "description": "A simple Next.js starter kit with TailwindCSS (JIT) and Framer Motion preconfigured",
+  "author": "Sam Goddard <hello@samgoddard.co.uk> (https://samgoddard.co.uk)",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:samuelgoddard/next-tailwind-motion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/samuelgoddard/next-tailwind-motion/issues"
+  },
   "license": "ISC",
   "keywords": [
     "nextjs",
@@ -12,7 +19,7 @@
     "motion",
     "preact"
   ],
-  "homepage": "jmmpoy.com",
+  "homepage": "https://sg-next-tailwind-motion.vercel.app/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
