@@ -1,6 +1,5 @@
 import {motion} from 'framer-motion'
 import Image from 'next/image';
-import SmoothScrolling from '@/components/smoothScrolling';
 
 export  const ProjectImages = ({
     image,
