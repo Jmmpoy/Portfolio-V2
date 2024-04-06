@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
 
       <Header />
      
-      <AnimatePresence mode="wait">
+      <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} key={router.asPath} />
       </AnimatePresence>
 

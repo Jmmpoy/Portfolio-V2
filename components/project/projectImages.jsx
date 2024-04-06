@@ -13,11 +13,11 @@ export  const ProjectImages = ({
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 0.6, duration: 0.7, ease: "easeInOut" },
+          transition: { delay: 0.3, duration: 0.7, ease: "easeInOut" },
         }}
         exit={{
           opacity: 0,
-          transition: { delay: 0.6, duration: 0.7, ease: "easeInOut" },
+          transition: {duration: 0.7, ease: "easeInOut" },
         }}
         className="image-container min-h-[420px] sepia-[10%]  mx-auto flex flex-col  justify-center items-center gap-y-8   "
       >

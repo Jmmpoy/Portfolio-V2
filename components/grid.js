@@ -71,8 +71,7 @@ export default function Grid({ data }) {
             <FadeInWhenVisible key={`project-${project.id}`}>
               <Link
                 scroll={false}
-                href={`/projects/[id]`}
-                as={`/projects/${project.id}`}
+                href={`/projects/${project.id}`}
                 passHref
                 className="link h-full"
               >
