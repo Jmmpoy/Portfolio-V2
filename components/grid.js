@@ -21,8 +21,7 @@ export default function Grid({ data }) {
     exit: {
       opacity: 0,
       transition: {
-        delay: 0.4,
-        duration: 0.6,
+        duration: 0.3,
         ease: [0.7, 0, 0.3, 1],
       },
     },
