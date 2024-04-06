@@ -11,7 +11,6 @@ import {motion, useAnimation} from "framer-motion"
 
 
 export default function Project({ project }) {
-  console.log('project', !!project);
 
   
   const {

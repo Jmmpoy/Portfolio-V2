@@ -12,17 +12,17 @@ export default function Home() {
 
   return (
     <Layout className="no-scrollbar relative">
-            <NextSeo
-              title="Mpoy Jean-Marc — Développeur Front-End"
-              description="Jean-Marc Mpoy est un développeur passionné par l'enrichissement de l'expérience utilisateur à travers des interfaces élégantes et interactives. Son travail en freelance avec une diversité de partenaires vise à maximiser l'engagement utilisateur."
-            />
+      <NextSeo
+        title="Mpoy Jean-Marc — Développeur Front-End"
+        description="Jean-Marc Mpoy est un développeur passionné par l'enrichissement de l'expérience utilisateur à travers des interfaces élégantes et interactives. Son travail en freelance avec une diversité de partenaires vise à maximiser l'engagement utilisateur."
+      />
 
-            {data && (
-              <motion.div className="relative bg-beige">
-                <Hero />
-                <Grid data={data} />
-              </motion.div>
-            )}
-          </Layout>
+      {data && (
+        <motion.div className="relative bg-beige">
+          <Hero />
+          <Grid data={data} />
+        </motion.div>
+      )}
+    </Layout>
   );
 }
