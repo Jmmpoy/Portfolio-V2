@@ -32,11 +32,11 @@ export default function Project({ project }) {
         initial={{ width: 0 }}
         animate={{
           width: "100%",
-          transition: { duration: 1.3, ease: "easeInOut" },
+          transition: { duration: .5, ease: "easeInOut" },
         }}
         exit={{
           width: 0,
-          transition: { duration: 1.3, ease: "easeInOut" },
+          transition: { duration: .7, ease: "easeInOut" },
         }}
         className="border-b-1 border-dashed border-black opacity-20 my-2"
       />

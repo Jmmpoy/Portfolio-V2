@@ -6,7 +6,7 @@ export   const Description = ({description}) => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 0.9, duration: 0.7, ease: "easeInOut" },
+          transition: { delay: 0.5, duration: 0.3, ease: "easeInOut" },
         }}
         exit={{
           opacity: 0,

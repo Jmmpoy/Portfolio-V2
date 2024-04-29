@@ -42,7 +42,7 @@ export default function About() {
   const content2 = [
     {
       id: 3,
-      text: "En tant que développeur, il a eu ",
+      text: "En tant que développeur, il a eu",
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ export default function About() {
     },
     {
       id: 5,
-      text: "un panel de clients dont Microsoft, ",
+      text: "un panel de clients dont Microsoft,",
     },
     {
       id: 6,
@@ -58,57 +58,6 @@ export default function About() {
     },
   ];
 
-  const presentationEng = [
-    {
-      id: 1,
-      text: "Mpoy Jean-Marc is a front-end",
-    },
-
-    {
-      id: 2,
-      text: "developer based in France, ",
-    },
-    {
-      id: 3,
-      text: "evolving his craft in the digital ",
-    },
-    {
-      id: 4,
-      text: "industry for more than 8 years.",
-    },
-  ];
-  const contentEng = [
-    {
-      id: 0,
-      text: "Passionate about design he speciales in ",
-    },
-    {
-      id: 1,
-      text: "web experiences with a strong focus on ",
-    },
-    {
-      id: 2,
-      text: " animation and interaction.",
-    },
-  ];
-  const content2Eng = [
-    {
-      id: 3,
-      text: "As a front end developer, he had the",
-    },
-    {
-      id: 4,
-      text: "opportunity to collaborate with a broad",
-    },
-    {
-      id: 5,
-      text: "range of clients that includes Microsoft, ",
-    },
-    {
-      id: 6,
-      text: " Canal+ , Soundcharts or FilmoTv.",
-    },
-  ];
 
   return (
     <Container extraClasses="Content-Container  h-screen py-12 overflow-hidden">
