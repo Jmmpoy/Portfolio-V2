@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../../components/container";
 import data from "../../api.js";
 import Dates from "@/components/project/dates";
@@ -7,12 +7,9 @@ import Title from "@/components/project/title";
 import Description from "@/components/project/desccription";
 import Divider from "@/components/divider";
 import ProjectImages from "@/components/project/projectImages";
-import {motion, useAnimation} from "framer-motion"
-
+import { motion, useAnimation } from "framer-motion";
 
 export default function Project({ project }) {
-
-  
   const {
     year,
     tags,
@@ -23,8 +20,8 @@ export default function Project({ project }) {
     secondaryImage,
     thirdImage,
     fourthImage,
+    fifthImage,
   } = project;
-
 
   const Divider = () => {
     return (
@@ -32,47 +29,58 @@ export default function Project({ project }) {
         initial={{ width: 0 }}
         animate={{
           width: "100%",
-          transition: { duration: .5, ease: "easeInOut" },
+          transition: { duration: 0.5, ease: "easeInOut" },
         }}
         exit={{
           width: 0,
-          transition: { duration: .7, ease: "easeInOut" },
+          transition: { duration: 0.7, ease: "easeInOut" },
         }}
         className="border-b-1 border-dashed border-black opacity-20 my-2"
       />
     );
   };
 
-
   return (
     <>
-       <motion.div className="Content-Container overflow-scroll sm:overflow-hidden relative custom-height-md">
-        <motion.div className="flex flex-col md:flex-row h-full">    
+      <motion.div className="Content-Container overflow-scroll sm:overflow-hidden relative custom-height-md">
+        <motion.div className="flex flex-col md:flex-row h-full">
           <Container extraClasses="w-full flex flex-col mt-12 py-12 md:w-1/3">
-           {link && name &&  <Title key="project-title"
-              link={link}
-              name={name}
-              classes="hero-font-size text-4xl sm=:text-4xl md:text-4xl  mt-8 md:mt-0 mb-0 uppercase font-sohneHalbfett tracking-tighter "
-            />}
+            {link && name && (
+              <Title
+                key="project-title"
+                link={link}
+                name={name}
+                classes="hero-font-size text-4xl sm=:text-4xl md:text-4xl  mt-8 md:mt-0 mb-0 uppercase font-sohneHalbfett tracking-tighter "
+              />
+            )}
             <Divider key="project-divider-1" />
-           {description && year && tags &&  <motion.div className="flex flex-col grow justify-end">
-              <Description description={description} key="project-description" />
-              <Divider key="project-divider-2" />
-              <Dates year={year} key="project-year" />
-              <Divider key="project-divider-3"/>
-              <Tags tags={tags} key="project-tags" />
-            </motion.div>}
+            {description && year && tags && (
+              <motion.div className="flex flex-col grow justify-end">
+                <Description
+                  description={description}
+                  key="project-description"
+                />
+                <Divider key="project-divider-2" />
+                <Dates year={year} key="project-year" />
+                <Divider key="project-divider-3" />
+                <Tags tags={tags} key="project-tags" />
+              </motion.div>
+            )}
           </Container>
 
-         {name && primaryImage && secondaryImage && thirdImage &&  <motion.div className="w-full md:mt-12 px-6 py-12 md:px-8 md:w-2/3 overflow-auto">
-            <ProjectImages key="project-images"
-            name={name}
-              image={primaryImage}
-              secondaryImage={secondaryImage}
-              thirdImage={thirdImage}
-              fourthImage={fourthImage}
-            />
-          </motion.div>}
+          {name && primaryImage && secondaryImage && thirdImage && (
+            <motion.div className="w-full md:mt-12 px-6 py-12 md:px-8 md:w-2/3 overflow-auto">
+              <ProjectImages
+                key="project-images"
+                name={name}
+                image={primaryImage}
+                secondaryImage={secondaryImage}
+                thirdImage={thirdImage}
+                fourthImage={fourthImage}
+                fifthImage={fifthImage}
+              />
+            </motion.div>
+          )}
         </motion.div>
       </motion.div>
     </>

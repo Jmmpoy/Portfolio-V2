@@ -18,15 +18,44 @@ import fiftylab4 from "./public/assets/Projects/350lab/350.png";
 import fiftylab5 from "./public/assets/Projects/350lab/350-2.png";
 import fiftylab6 from "./public/assets/Projects/350lab/350-3.png";
 
-import clara from "./public/assets/Projects/Clara/clara-1.png"
-import clara2 from "./public/assets/Projects/Clara/clara-2.png"
-import clara3 from "./public/assets/Projects/Clara/clara-3.png"
+import clara from "./public/assets/Projects/Clara/clara-1.png";
+import clara2 from "./public/assets/Projects/Clara/clara-2.png";
+import clara3 from "./public/assets/Projects/Clara/clara-3.png";
 
+import maison90Homepage from "public/assets/Projects/Maison90/Homepage.jpg";
+import maison90 from "public/assets/Projects/Maison90/Home.jpg";
+import maison901 from "public/assets/Projects/Maison90/Projcets.jpg";
+import maison902 from "public/assets/Projects/Maison90//get-your-space-in-shape.jpg";
+import maison903 from "public/assets/Projects/Maison90/Project.jpg";
+import maison904 from "public/assets/Projects/Maison90/get-dressed-and-get-out.png";
 
 const data = [
   {
+    id: 3,
+    name: "Maison90",
+    primaryImage: maison90,
+    secondaryImage: maison901,
+    thirdImage: maison902,
+    fourthImage: maison903,
+    fifthImage: maison904,
+    description: [
+      {
+        id: 1,
+        text: "Développment du site web",
+      },
+      {
+        id: 2,
+        text: "de l'Agence Créative Maison90 ",
+      },
+    ],
+    role: "Développeur Front-End",
+    tags: "Development / Nextjs / Sanity",
+    year: "2024",
+    link: "https://maison90.com",
+  },
+  {
     id: 5,
-    color:"text-white",
+    color: "text-white",
     name: "350lab",
     primaryImage: fiftyLabIpad,
     secondaryImage: fiftyLab,
@@ -50,7 +79,7 @@ const data = [
   {
     id: 1,
     name: "myCanal ",
-    color:"text-black",
+    color: "text-black",
     primaryImage: myCanal2,
     secondaryImage: myCanal,
     thirdImage: myCanal3,
@@ -73,7 +102,7 @@ const data = [
   {
     id: 2,
     name: "FilmoTv",
-    color:"text-black",
+    color: "text-black",
     primaryImage: filmo,
     secondaryImage: filmo2,
     thirdImage: filmo3,
@@ -94,8 +123,8 @@ const data = [
   },
   {
     id: 6,
-    name: "Clara Onuegbu",
-    color:"text-white",
+    name: "Victoria C. Onuegbu",
+    color: "text-white",
     primaryImage: clara,
     secondaryImage: clara2,
     thirdImage: clara3,
@@ -114,46 +143,6 @@ const data = [
     year: "2022 - 2023",
     link: "https://www.350lab.com/",
   },
-  // {
-  //   id: 3,
-  //   name: "Soundcharts",
-  //   primaryImage: soundcharts,
-  //   secondaryImage: soundcharts2,
-  //   description: [
-  //     {
-  //       id: 1,
-  //       text: "Développment du site web et de l'application",
-  //     },
-  //     {
-  //       id: 2,
-  //       text: "Soundcharts sur Ios et Android",
-  //     },
-  //   ],
-  //   role: "Développeur Front-End",
-  //   tags: "Development / Design / React",
-  //   year: "2020 - 2023",
-  //   link: "https://soundcharts.com/",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Elow",
-  //   primaryImage: test,
-  //   secondaryImage: test,
-  //   description: [
-  //     {
-  //       id: 1,
-  //       text: "Application permettant de mesurer la",
-  //     },
-  //     {
-  //       id: 2,
-  //       text: "consommation énergétique de son PC",
-  //     },
-  //   ],
-  //   role: "Développeur Front-End",
-  //   tags: "Development / Windows ",
-  //   year: "2020 - 2023",
-  //   link: "https://elow.energy/fr/",
-  // },
 ];
 
 export default data;
