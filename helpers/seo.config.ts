@@ -1,7 +1,7 @@
 export default {
   defaultTitle: "Mpoy Jean-Marc — Développeur Front-End",
   description:
-    "Mpoy Jean-Marc est un développeur spécialisé dans le mouvement et l'interaction. En tant qu'indépendant, il travaille avec des entreprises, des agences, des startups et des particuliers.",
+    "Mpoy Jean-Marc est un développeur et designer d’interaction, passionné par le mouvement et la fluidité du web.En tant qu’indépendant, il conçoit des expériences pour des agences, marques et studios créatifs",
   titleTemplate: "Mpoy Jean-Marc — Développeur Front-End",
   canonical: "https://www.jmmpoy.com/",
   openGraph: {
@@ -11,7 +11,7 @@ export default {
     site_name: "Mpoy Jean-Marc - Portfolio",
     title: "Mpoy Jean-Marc — Développeur Front-End",
     description:
-      "Développeur spécialisé dans le mouvement et l'interaction. Je crée des expériences web modernes et engageantes.",
+      "Mpoy Jean-Marc est un développeur et designer d’interaction, passionné par le mouvement et la fluidité du web.En tant qu’indépendant, il conçoit des expériences pour des agences, marques et studios créatifs",
     images: [
       {
         url: "https://www.jmmpoy.com/og-image.jpg",
