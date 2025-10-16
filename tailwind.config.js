@@ -1,8 +1,5 @@
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
       sans: ["Futura", "Arial", "sans-serif"],
@@ -16,10 +13,12 @@ module.exports = {
       founders: ["Founders"],
       ibm: ["IBM"],
       ibmLight: ["IBMLight"],
-      sohneBuch:["Sohne-Buch"],
-      sohneFett:["Sohne-Fett"],
-      sohneKraftig:["Sohne-Kraftig"],
-      sohneHalbfett:["Sohne-Halbfett"]
+      sohneBuch: ["Sohne-Buch"], // light
+      sohneFett: ["Sohne-Fett"], // très gras
+      sohneKraftig: ["Sohne-Kraftig"], // gras
+      sohneHalbfett: ["Sohne-Halbfett"], // gras moyen
+      sohneLeicht: ["Sohne-Leicht"],
+      sohneExtraleicht: ["Sohne-Extraleicht"],
     },
     screens: {
       xsm: "400px",
@@ -32,9 +31,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        black: "#000",
+        fullBlack: "#000000",
+        black: "#282828",
         white: "#fcfbfa",
-        beige:"#f2eeea",
+        beige: "#FFFFFF",
         gray: "#888888",
         blue: "#2677bb",
       },

@@ -14,13 +14,31 @@
 
 /* Simple defaults */
 
-*{
+* {
   scroll-behavior: smooth;
-
 }
 
 body {
   @apply font-sans antialiased text-black bg-beige;
+}
+
+.grain {
+  position: relative;
+  isolation: isolate; /* Create a new stacking context */
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/noise.svg");
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 2; /* Ensure it's above the image */
+  animation: grain 8s steps(10) infinite;
 }
 
 h1 {
@@ -52,11 +70,24 @@ p {
   @apply text-lg sm:text-xl  xl:text-2xl;
 }
 
-@layer components {
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
 
+/* Hide scrollbar for IE, Edge and Firefox */
+html,
+body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+@layer components {
   .custom-height-md {
     @media (min-width: 768px) {
-      height: calc(100vh - 48px);
+      height: calc(100vh - 24px);
     }
   }
   /* Hero Headline*/
@@ -167,8 +198,9 @@ p {
     animation: fadeIn 2s;
   }
 
-  .grid-element > span {
-     height: 100%  !important; 
+  .grid-element > img {
+    height: 100% !important;
+    object-fit: cover !important;
   }
   @keyframes fadeIn {
     0% {
@@ -177,19 +209,5 @@ p {
     100% {
       opacity: 1;
     }
-  }
-}
-
-
-
-@layer utilities {
-  /* Hide scrollbar */
-  body::-webkit-scrollbar {
-    display: none;
-  }
-
-  body {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
   }
 }

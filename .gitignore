@@ -17,6 +17,12 @@
 
 # misc
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 *.pem
 
 # debug
@@ -33,3 +39,26 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# IDE - WebStorm/IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Temp files
+*.log
+*.swp
+*.swo
+*~
+.cache/
+
+# TypeScript
+*.tsbuildinfo
