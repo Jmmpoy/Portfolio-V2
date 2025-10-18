@@ -22,6 +22,10 @@ export default function Project({ project }: { project: ProjectType }) {
     fifthImage,
     sixthImage,
     seventhImage,
+    eighthImage,
+    ninthImage,
+    tenthImage,
+    eleventhImage,
     coverVideo,
     objectFit,
   } = project;
@@ -35,6 +39,10 @@ export default function Project({ project }: { project: ProjectType }) {
     fifthImage,
     sixthImage,
     seventhImage,
+    eighthImage,
+    ninthImage,
+    tenthImage,
+    eleventhImage,
   ].filter((item): item is string => Boolean(item));
 
   const Divider = () => {

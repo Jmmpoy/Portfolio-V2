@@ -18,5 +18,9 @@ export interface Project {
   fifthImage?: string;
   sixthImage?: string;
   seventhImage?: string;
+  eighthImage?: string;
+  ninthImage?: string;
+  tenthImage?: string;
+  eleventhImage?: string;
   objectFit?: string;
 }
