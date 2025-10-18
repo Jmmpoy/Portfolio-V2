@@ -23,6 +23,7 @@ export default function Project({ project }: { project: ProjectType }) {
     sixthImage,
     seventhImage,
     coverVideo,
+    objectFit,
   } = project;
 
   const media = [
@@ -80,7 +81,7 @@ export default function Project({ project }: { project: ProjectType }) {
 
           {media.length > 0 && (
             <motion.div className="w-full px-6 pt-[54px] md:px-4 md:w-2/3 overflow-auto">
-              <ProjectImages key="project-images" name={name} media={media} />
+              <ProjectImages key="project-images" name={name} media={media} objectFit={objectFit} />
             </motion.div>
           )}
         </motion.div>

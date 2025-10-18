@@ -7,15 +7,18 @@ interface MediaItemProps {
   name: string;
   onClick: () => void;
   isPriority?: boolean;
+  objectFit?: string;
 }
 
 interface MediaItemPropsExtended extends MediaItemProps {
   isPriority?: boolean;
+  objectFit?: string;
 }
 
 interface ProjectImagesProps {
   name: string;
   media: string[];
+  objectFit?: string;
 }
 
 interface SelectedMedia {
@@ -23,8 +26,15 @@ interface SelectedMedia {
   index: number;
 }
 
-const MediaItem = ({ item, name, onClick, isPriority = false }: MediaItemPropsExtended) => {
+const MediaItem = ({
+  item,
+  name,
+  onClick,
+  isPriority = false,
+  objectFit = "cover",
+}: MediaItemPropsExtended) => {
   const isVideo = typeof item === "string" && item.endsWith(".mp4");
+  const objectFitClass = objectFit === "contain" ? "object-contain" : "object-cover";
 
   return (
     <div onClick={onClick} className="basis-full project-image-card cursor-pointer w-full">
@@ -36,7 +46,7 @@ const MediaItem = ({ item, name, onClick, isPriority = false }: MediaItemPropsEx
           muted
           playsInline
           preload="auto"
-          className="min-w-[320px] image grain w-full h-full object-cover aspect-[4/3]"
+          className={`min-w-[320px] image grain w-full h-full ${objectFitClass} aspect-[4/3]`}
         />
       ) : (
         <motion.div className="relative w-full aspect-[4/3] min-w-[320px]">
@@ -48,7 +58,7 @@ const MediaItem = ({ item, name, onClick, isPriority = false }: MediaItemPropsEx
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={90}
             loading={isPriority ? "eager" : "lazy"}
-            className="object-cover image grain min-h-full"
+            className={`${objectFitClass} image grain min-h-full`}
           />
         </motion.div>
       )}
@@ -56,7 +66,7 @@ const MediaItem = ({ item, name, onClick, isPriority = false }: MediaItemPropsEx
   );
 };
 
-const ProjectImages = ({ name, media }: ProjectImagesProps) => {
+const ProjectImages = ({ name, media, objectFit = "cover" }: ProjectImagesProps) => {
   const [selectedMedia, setSelectedMedia] = useState<SelectedMedia | null>(null);
 
   const handleMediaClick = (item: string, index: number) => {
@@ -89,6 +99,7 @@ const ProjectImages = ({ name, media }: ProjectImagesProps) => {
             name={name}
             onClick={() => handleMediaClick(item, index)}
             isPriority={index < 2}
+            objectFit={objectFit}
           />
         ))}
       </motion.div>

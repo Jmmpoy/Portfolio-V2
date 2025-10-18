@@ -42,7 +42,7 @@ const data = [
   {
     id: "Filmo",
     name: "Filmo Tv",
-    year: "2024",
+    year: "2020-2023",
     tags: ["Développement Mobile"],
     description: {
       firstPart:
@@ -65,20 +65,23 @@ const data = [
     tags: ["UI Design", "Direction Artistique", "Développement Front-End"],
     description: {
       firstPart:
-        "Pour 350lab, un studio créatif orienté stratégie et design, j’ai conçu et développé une landing page immersive et percutante destinée à renforcer la visibilité de la marque et à générer des leads qualifiés. J’ai assuré la direction artistique UI/UX sur Figma — typographies, rythme visuel, structure — avant de développer la page sous Next.js, en y intégrant des animations fluides avec Framer Motion pour donner vie à l’identité du studio.",
+        "Pour 350lab, un studio créatif orienté stratégie et design, j'ai conçu et développé une landing page immersive et percutante destinée à renforcer la visibilité de la marque et à générer des leads qualifiés. J'ai assuré la direction artistique UI/UX sur Figma — typographies, rythme visuel, structure — avant de développer la page sous Next.js, en y intégrant des animations fluides avec Framer Motion pour donner vie à l'identité du studio.",
       secondPart:
-        "Ce projet m’a permis d’exprimer pleinement ma double compétence designer / développeur, en créant une expérience digitale à la fois esthétique, performante et impactante.",
+        "Ce projet m'a permis d'exprimer pleinement ma double compétence designer / développeur, en créant une expérience digitale à la fois esthétique, performante et impactante.",
     },
     color: "bg-blue-500",
-    coverImage: "/assets/Projects/350lab/350lab-ipad.webp",
-    secondaryImage: "/assets/Projects/350lab/350lab.webp",
-    thirdImage: "/assets/Projects/350lab/350lab-2.webp",
-    fourthImage: "/assets/Projects/350lab/350-3.webp",
+    objectFit: "contain",
+    coverImage: "/assets/Projects/350lab/350lab.webp",
+    secondaryImage: "/assets/Projects/350lab/about.webp",
+    thirdImage: "/assets/Projects/350lab/process.webp",
+    fourthImage: "/assets/Projects/350lab/services.webp",
+    fifthImage: "/assets/Projects/350lab/philosophy.webp",
+    sixthImage: "/assets/Projects/350lab/contact.webp",
   },
   {
     id: "Amcros",
     name: "Amcros",
-    year: "2023",
+    year: "2025",
     tags: ["Direction Artistique", "Développement", "UI Design"],
     description: {
       firstPart:
