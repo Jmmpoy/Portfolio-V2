@@ -9,33 +9,27 @@ const SplitText = dynamic(() => import("@/components/splitText"), {
   ssr: false,
 });
 
-const AboutPreview = () => {
-  const paragraphs = [
-    "Designer et développeur front-end depuis plus de cinq ans, j’explore la rencontre entre design et technologie. J’ai collaboré avec des agences web, des éditeurs de logiciels, ainsi que des studios créatifs et start-ups, en cultivant une approche à la fois esthétique et pragmatique. Inspiré par l’art, la musique, l’architecture, j’aime créer des interfaces qui respirent, bougent et racontent quelque chose.",
-  ];
+const ABOUT_TEXT =
+  "Designer et développeur front-end depuis plus de cinq ans, j’explore la rencontre entre design et technologie. J’ai collaboré avec des agences web, des éditeurs de logiciels, ainsi que des studios créatifs et start-ups, en cultivant une approche à la fois esthétique et pragmatique. Inspiré par l’art, la musique, l’architecture, j’aime créer des interfaces qui respirent, bougent et racontent quelque chose.";
 
+const AboutPreview = () => {
   const containerVariants: Variants = {
     initial: {
       maxHeight: 0,
-      opacity: 0,
       paddingTop: 0,
       paddingBottom: 0,
     },
     animate: {
       maxHeight: "500px",
-      opacity: 1,
       paddingTop: "32px",
       paddingBottom: "32px",
       transition: {
         duration: 0.4,
         ease: [0.7, 0, 0.3, 1],
-        delayChildren: 0.2,
-        staggerChildren: 0.1,
       },
     },
     exit: {
       maxHeight: 0,
-      opacity: 0,
       paddingTop: 0,
       paddingBottom: 0,
       transition: {
@@ -44,14 +38,6 @@ const AboutPreview = () => {
       },
     },
   };
-
-  const itemVariants: Variants = {
-    initial: { opacity: 0, filter: "blur(2px)" },
-    animate: { opacity: 1, filter: "blur(0px)" },
-    exit: { opacity: 0, filter: "blur(2px)" },
-  };
-
-  const itemClasses = "text-base xsm:text-base  font-sohneLeicht  sm:text-2xl tracking-tight";
 
   return (
     <motion.div
@@ -61,15 +47,21 @@ const AboutPreview = () => {
       animate="animate"
       exit="exit"
     >
-      {paragraphs.map((p, i) => (
-        <motion.p
-          key={i}
-          variants={itemVariants}
-          className={`${itemClasses} ${i > 0 ? "mt-4" : ""}`}
-        >
-          {p}
-        </motion.p>
-      ))}
+      <SplitText
+        text={ABOUT_TEXT}
+        tag="p"
+        splitType="lines"
+        mask="lines"
+        textAlign="left"
+        from={{ yPercent: 110 }}
+        to={{ yPercent: 0 }}
+        delay={90}
+        duration={0.7}
+        ease="power4.out"
+        threshold={0.05}
+        rootMargin="0px"
+        className="text-base xsm:text-base  font-sohneLeicht  sm:text-2xl tracking-tight"
+      />
     </motion.div>
   );
 };

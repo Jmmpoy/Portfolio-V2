@@ -23,4 +23,5 @@ export interface Project {
   tenthImage?: string;
   eleventhImage?: string;
   objectFit?: string;
+  inProgress?: boolean;
 }

@@ -1,5 +1,66 @@
 const data = [
   {
+    id: "AgatheMarimbert",
+    name: "Agathe Marimbert",
+    year: "2026",
+    tags: ["Développement Front-End"],
+    inProgress: true,
+    link: "",
+    coverImage: "/assets/Projects/AgatheMarimbert/agathe-1.png",
+  },
+  {
+    id: "AntoninSaurat",
+    name: "Antonin Saurat",
+    year: "2026",
+    tags: ["Développement Front-End"],
+    inProgress: true,
+    link: "",
+    coverImage: "/assets/Projects/AntoninSaurat/antonin-1.png",
+  },
+  {
+    id: "Beaumonde",
+    name: "Beaumonde",
+    year: "2026",
+    tags: ["Développement Front-End"],
+    description: {
+      firstPart:
+        "Pour Beaumonde, agence de talents et de production basée à Paris, j'ai développé le site vitrine présentant leurs photographes, réalisateurs et set designers. L'enjeu était de restituer fidèlement l'identité éditoriale de l'agence — grille d'images, typographie et mise en page épurée — dans une navigation fluide entre les portfolios de chaque talent.",
+      secondPart:
+        "Le site a été développé sur Next.js avec une intégration Tailwind CSS sur mesure, garantissant des performances optimales et une navigation fluide entre les différentes pages talents.",
+    },
+    color: "bg-orange-500",
+    link: "https://beaumonde.paris/",
+    coverImage: "/assets/Projects/Beaumonde/beaumonde-2.png",
+    secondaryImage: "/assets/Projects/Beaumonde/beaumonde-1.png",
+    thirdImage: "/assets/Projects/Beaumonde/beaumonde-5.png",
+    fourthImage: "/assets/Projects/Beaumonde/beaumonde-6.png",
+    fifthImage: "/assets/Projects/Beaumonde/beaumonde-7.png",
+    sixthImage: "/assets/Projects/Beaumonde/beaumonde-8.png",
+    seventhImage: "/assets/Projects/Beaumonde/beaumonde-9.png",
+    eighthImage: "/assets/Projects/Beaumonde/beaumonde-10.png",
+  },
+  {
+    id: "LeaZeroil",
+    name: "Léa Zeroil",
+    year: "2026",
+    tags: ["Développement Front-End"],
+    description: {
+      firstPart:
+        "Pour Léa Zeroil, designer de mobilier basée en Normandie, j'ai développé le site e-commerce présentant ses collections de pièces sculpturales. L'objectif était de mettre en valeur chaque objet — luminaires, assises, tables — dans une expérience d'achat sobre et élégante, fidèle à l'univers de la marque.",
+      secondPart:
+        "Le site a été développé sur Next.js, avec une gestion du catalogue et du tunnel d'achat pensée pour une navigation fluide sur l'ensemble des collections.",
+    },
+    color: "bg-pink-500",
+    link: "https://www.leazeroil.com/",
+    coverImage: "/assets/Projects/LeaZeroil/leazeroil-5.png",
+    secondaryImage: "/assets/Projects/LeaZeroil/leazeroil-1.png",
+    thirdImage: "/assets/Projects/LeaZeroil/leazeroil-3.png",
+    fourthImage: "/assets/Projects/LeaZeroil/leazeroil-8.png",
+    fifthImage: "/assets/Projects/LeaZeroil/leazeroil-2.png",
+    sixthImage: "/assets/Projects/LeaZeroil/leazeroil-6.png",
+    seventhImage: "/assets/Projects/LeaZeroil/leazeroil-7.png",
+  },
+  {
     id: "Maison90",
     name: "Maison90",
     year: "2023 - 2024",
@@ -57,47 +118,6 @@ const data = [
     coverImage: "/assets/Projects/Filmo/filmo.webp",
     secondaryImage: "/assets/Projects/Filmo/filmo2.webp",
     thirdImage: "/assets/Projects/Filmo/filmo3.webp",
-  },
-  {
-    id: "350lab",
-    name: "350lab",
-    year: "2024",
-    link: "https://www.350lab.com/",
-    tags: ["UI Design", "Direction Artistique", "Développement Front-End"],
-    description: {
-      firstPart:
-        "Pour 350lab, un studio créatif orienté stratégie et design, j'ai conçu et développé une landing page immersive et percutante destinée à renforcer la visibilité de la marque et à générer des leads qualifiés. J'ai assuré la direction artistique UI/UX sur Figma — typographies, rythme visuel, structure — avant de développer la page sous Next.js, en y intégrant des animations fluides avec Framer Motion pour donner vie à l'identité du studio.",
-      secondPart:
-        "Ce projet m'a permis d'exprimer pleinement ma double compétence designer / développeur, en créant une expérience digitale à la fois esthétique, performante et impactante.",
-    },
-    color: "bg-blue-500",
-    objectFit: "contain",
-    coverImage: "/assets/Projects/350lab/350lab.webp",
-    secondaryImage: "/assets/Projects/350lab/landing.mp4",
-    thirdImage: "/assets/Projects/350lab/about.webp",
-    fourthImage: "/assets/Projects/350lab/process.webp",
-    fifthImage: "/assets/Projects/350lab/services.webp",
-    sixthImage: "/assets/Projects/350lab/philosophy.webp",
-    seventhImage: "/assets/Projects/350lab/contact.webp",
-  },
-  {
-    id: "Amcros",
-    name: "Amcros",
-    year: "2025",
-    tags: ["Direction Artistique", "Développement", "UI Design"],
-    description: {
-      firstPart:
-        "Pour Amcros, une agence événementielle haut de gamme à la vision engagée et contemporaine, j’ai conçu et développé une vitrine digitale immersive incarnant leur identité et leurs valeurs. J’ai assuré la direction artistique complète — du design UI/UX à la définition de la palette visuelle et du langage graphique — afin de traduire leur univers raffiné dans une expérience élégante et cohérente.",
-      secondPart:
-        "Le site a été développé sur Next.js avec une intégration Tailwind CSS sur mesure, garantissant des performances optimales et une navigation fluide. Enfin, j’ai intégré le CMS Sanity, permettant à l’équipe Amcros de gérer facilement leur contenu, dans un cadre de collaboration agile et itérative.",
-    },
-    color: "bg-yellow-500",
-    link: "https://www.amcros.com/",
-    coverVideo: "/assets/Projects/Amcros/landing.mp4",
-    coverImage: "/assets/Projects/Amcros/Amcros-hero.webp",
-    secondaryImage: "/assets/Projects/Amcros/amcros-about.webp",
-    thirdImage: "/assets/Projects/Amcros/amcros-events.webp",
-    fourthImage: "/assets/Projects/Amcros/amcros-5.webp",
   },
 ];
 

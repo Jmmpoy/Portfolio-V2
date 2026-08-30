@@ -25,6 +25,7 @@ export interface SplitTextProps {
   textAlign?: React.CSSProperties["textAlign"];
   onLetterAnimationComplete?: () => void;
   playOnce?: boolean;
+  mask?: "lines" | "words" | "chars";
 }
 
 const SplitText: React.FC<SplitTextProps> = ({
@@ -42,6 +43,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   textAlign = "center",
   onLetterAnimationComplete,
   playOnce = true,
+  mask,
 }) => {
   const ref = useRef<HTMLParagraphElement>(null);
   const animationCompletedRef = useRef(false);
@@ -110,6 +112,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         type: splitType,
         smartWrap: true,
         autoSplit: splitType === "lines",
+        ...(mask ? { mask } : {}),
         linesClass: "split-line",
         wordsClass: "split-word",
         charsClass: "split-char",
@@ -167,6 +170,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         threshold,
         rootMargin,
         fontsLoaded,
+        mask,
         onLetterAnimationComplete,
       ],
       scope: ref,

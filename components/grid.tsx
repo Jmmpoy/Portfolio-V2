@@ -36,6 +36,76 @@ interface ProjectItemProps {
 const ProjectItem = ({ project, handleLinkClick }: ProjectItemProps) => {
   const [ref, isHovering] = useHover<HTMLDivElement>();
   const href = `/projects/${project.id}`;
+  const isInProgress = Boolean(project.inProgress);
+
+  const media = (
+    <motion.div className="grid-element sepia-[10%] aspect-[4/3] relative text-opacity-20 ease-in-out duration-300 hover:text-opacity-100 grain">
+      {project.coverVideo ? (
+        <video
+          src={project.coverVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hover:opacity-80  transition ease-in-out duration-700 h-full w-full object-cover"
+        />
+      ) : (
+        <Image
+          src={project.coverImage}
+          priority
+          alt={project.name}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          quality={90}
+          loading="eager"
+          className="object-cover hover:opacity-80 transition ease-in-out duration-700"
+        />
+      )}
+
+      {isInProgress && (
+        <span className="z-20 absolute top-4 left-4 uppercase text-black bg-white/90 px-2 py-1 font-founders text-xs tracking-wide">
+          En cours
+        </span>
+      )}
+
+      <AnimatePresence>
+        {isHovering && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className={`z-10 absolute inset-0 h-full w-full filter bg-black/30`}
+          />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {isHovering && (
+          <span className="z-20 absolute bottom-4 left-4 block overflow-hidden">
+            <motion.span
+              initial={{ y: "110%" }}
+              animate={{ y: "0%" }}
+              exit={{ y: "110%" }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="block uppercase text-white font-founders text-xl"
+            >
+              {project.name}
+            </motion.span>
+          </span>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+
+  if (isInProgress) {
+    return (
+      <motion.div ref={ref} variants={projectVariants}>
+        <div className="h-full cursor-not-allowed" aria-disabled="true">
+          {media}
+        </div>
+      </motion.div>
+    );
+  }
 
   return (
     <motion.div ref={ref} variants={projectVariants}>
@@ -47,56 +117,7 @@ const ProjectItem = ({ project, handleLinkClick }: ProjectItemProps) => {
         onClick={(e) => handleLinkClick(e, href)}
         className="link h-full"
       >
-        <motion.div className="grid-element sepia-[10%] aspect-[4/3] relative text-opacity-20 ease-in-out duration-300 hover:text-opacity-100 grain">
-          {project.coverVideo ? (
-            <video
-              src={project.coverVideo}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="hover:opacity-80  transition ease-in-out duration-700 h-full w-full object-cover"
-            />
-          ) : (
-            <>
-              <Image
-                src={project.coverImage}
-                priority
-                alt={project.name}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={90}
-                loading="eager"
-                className="object-cover hover:opacity-80 transition ease-in-out duration-700"
-              />
-            </>
-          )}
-
-          <AnimatePresence>
-            {isHovering && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className={`z-10 absolute inset-0 h-full w-full filter bg-black/30`}
-              />
-            )}
-          </AnimatePresence>
-          <AnimatePresence>
-            {isHovering && (
-              <motion.p
-                initial={{ opacity: 0, filter: "blur(10px)" }}
-                animate={{ opacity: 1, filter: "blur(0px)" }}
-                exit={{ opacity: 0, filter: "blur(10px)" }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className={`z-20  absolute bottom-4 left-4 transform uppercase text-white font-founders text-xl`}
-              >
-                {project.name}
-              </motion.p>
-            )}
-          </AnimatePresence>
-        </motion.div>
+        {media}
       </Link>
     </motion.div>
   );

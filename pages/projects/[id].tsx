@@ -106,9 +106,11 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 }
 
 export async function getStaticPaths() {
-  const paths = data.map((project) => ({
-    params: { id: project.id.toString() },
-  }));
+  const paths = data
+    .filter((project) => !project.inProgress)
+    .map((project) => ({
+      params: { id: project.id.toString() },
+    }));
   return {
     paths,
     fallback: false,
