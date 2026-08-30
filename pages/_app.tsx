@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: { Component: any; pageProp
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3600); // Should match the duration of your preloader animation
+    }, 2100); // Should match the duration of your preloader animation
 
     return () => clearTimeout(timer);
   }, []);

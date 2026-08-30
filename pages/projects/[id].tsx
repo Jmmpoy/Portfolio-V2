@@ -1,11 +1,12 @@
+import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 import Container from "../../components/container";
 import data from "@/api";
 import Dates from "@/components/project/dates";
 import Tags from "@/components/project/tags";
 import Title from "@/components/project/title";
 import Description from "@/components/project/desccription";
-import ProjectImages from "@/components/project/projectImages";
-import { motion } from "motion/react";
 import { Project as ProjectType } from "@/types/project";
 
 export default function Project({ project }: { project: ProjectType }) {
@@ -45,56 +46,107 @@ export default function Project({ project }: { project: ProjectType }) {
     eleventhImage,
   ].filter((item): item is string => Boolean(item));
 
-  const Divider = () => {
-    return (
-      <motion.hr
-        initial={{ width: 0 }}
-        animate={{
-          width: "100%",
-          transition: { duration: 0.5, ease: "easeInOut" },
-        }}
-        exit={{
-          width: 0,
-          transition: { duration: 0.7, ease: "easeInOut" },
-        }}
-        className="border-b-1 border-dashed border-black opacity-20 my-2"
-      />
-    );
-  };
+  const [selected, setSelected] = useState<string | null>(null);
+  const objectFitClass = objectFit === "contain" ? "object-contain" : "object-cover";
 
   return (
-    <>
-      <motion.div className="Content-Container overflow-scroll sm:overflow-hidden relative custom-height-md">
-        <motion.div className="flex flex-col md:flex-row h-full">
-          <Container extraClasses="w-full flex flex-col sm:mt-12 pt-12 md:w-1/3">
-            {link && name && (
-              <Title
-                key="project-title"
-                link={link}
-                name={name}
-                classes="hero-font-size text-4xl sm:text-4xl md:text-4xl  mt-8 md:mt-0 mb-0 uppercase font-sohneHalbfett tracking-tighter"
-              />
-            )}
-
-            <Description description={description} key="project-description" />
-            {description && year && tags && (
-              <motion.div className="flex flex-col grow justify-end">
-                <Divider key="project-divider-2" />
-                <Dates year={year} key="project-year" />
-                <Divider key="project-divider-3" />
-                <Tags tags={tags} key="project-tags" />
-              </motion.div>
-            )}
-          </Container>
-
-          {media.length > 0 && (
-            <motion.div className="w-full px-6 pt-[54px] md:px-4 md:w-2/3 overflow-auto">
-              <ProjectImages key="project-images" name={name} media={media} objectFit={objectFit} />
-            </motion.div>
-          )}
-        </motion.div>
+    <Container extraClasses="Content-Container pt-24 md:pt-28 pb-16 min-h-screen">
+      <motion.div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-dashed border-black/20 pb-6 mb-8">
+        {link && name && (
+          <Title
+            key="project-title"
+            link={link}
+            name={name}
+            classes="hero-font-size text-4xl sm:text-5xl uppercase font-sohneHalbfett tracking-tighter"
+          />
+        )}
+        {description && year && tags && (
+          <motion.div className="flex gap-8 items-baseline" key="project-meta">
+            <Dates year={year} key="project-year" />
+            <Tags tags={tags} key="project-tags" />
+          </motion.div>
+        )}
       </motion.div>
-    </>
+
+      <Description description={description} key="project-description" />
+
+      {media.length > 0 && (
+        <motion.div
+          key="project-images"
+          className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-10 sepia-[10%]"
+        >
+          {media.map((item, index) => {
+            const isVideo = item.endsWith(".mp4");
+            return (
+              <motion.button
+                key={index}
+                onClick={() => setSelected(item)}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                className="relative aspect-square bg-[#f3f2ef] overflow-hidden group"
+              >
+                {isVideo ? (
+                  <video
+                    src={item}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className={`w-full h-full ${objectFitClass} grain transition-transform duration-500 ease-out group-hover:scale-105`}
+                  />
+                ) : (
+                  <Image
+                    src={item}
+                    alt={name}
+                    fill
+                    priority={index < 2}
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    quality={85}
+                    className={`${objectFitClass} grain transition-transform duration-500 ease-out group-hover:scale-105`}
+                  />
+                )}
+              </motion.button>
+            );
+          })}
+        </motion.div>
+      )}
+
+      <AnimatePresence>
+        {selected && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => setSelected(null)}
+            className="fixed inset-0 bg-fullBlack/95 z-50 flex items-center justify-center cursor-pointer p-6"
+          >
+            <motion.div
+              initial={{ scale: 0.96, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.96, opacity: 0 }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="relative w-full max-w-3xl aspect-[4/3]"
+            >
+              {selected.endsWith(".mp4") ? (
+                <video
+                  src={selected}
+                  autoPlay
+                  loop
+                  muted
+                  controls
+                  className="w-full h-full object-contain"
+                />
+              ) : (
+                <Image src={selected} alt={name} fill className="object-contain" />
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </Container>
   );
 }
 

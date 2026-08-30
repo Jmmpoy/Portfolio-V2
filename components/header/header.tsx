@@ -39,7 +39,7 @@ export default function Header() {
                     <Link
                       scroll={false}
                       href={url}
-                      className="relative tracking-tighter font-sohneBuch text-sm mix-blend-difference"
+                      className="relative tracking-tighter font-sohneBuch text-sm mix-blend-difference inline-block transition-transform duration-150 ease-out hover:scale-[1.04] active:scale-[0.96]"
                     >
                       <p className=" uppercase text-sm font-sohneKraftig">{route}</p>
                     </Link>

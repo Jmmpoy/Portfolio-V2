@@ -37,7 +37,7 @@ const MediaItem = ({
   const objectFitClass = objectFit === "contain" ? "object-contain" : "object-cover";
 
   return (
-    <div onClick={onClick} className="basis-full project-image-card cursor-pointer w-full">
+    <div onClick={onClick} className="basis-full project-image-card cursor-pointer w-full group">
       {isVideo ? (
         <motion.video
           src={item}
@@ -58,7 +58,7 @@ const MediaItem = ({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={90}
             loading={isPriority ? "eager" : "lazy"}
-            className={`${objectFitClass} image grain min-h-full`}
+            className={`${objectFitClass} image grain min-h-full transition-transform duration-200 ease-out group-hover:scale-[1.02] group-active:scale-[0.98]`}
           />
         </motion.div>
       )}

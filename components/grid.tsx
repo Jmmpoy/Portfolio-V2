@@ -72,28 +72,30 @@ const ProjectItem = ({ project, handleLinkClick }: ProjectItemProps) => {
         {isHovering && (
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: isInProgress ? 0.12 : 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className={`z-10 absolute inset-0 h-full w-full filter bg-black/30`}
+            className={`z-10 absolute inset-0 h-full w-full filter ${isInProgress ? "bg-black" : "bg-black/30"}`}
           />
         )}
       </AnimatePresence>
-      <AnimatePresence>
-        {isHovering && (
-          <span className="z-20 absolute bottom-4 left-4 block overflow-hidden">
-            <motion.span
-              initial={{ y: "110%" }}
-              animate={{ y: "0%" }}
-              exit={{ y: "110%" }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="block uppercase text-white font-founders text-xl"
-            >
-              {project.name}
-            </motion.span>
-          </span>
-        )}
-      </AnimatePresence>
+      {!isInProgress && (
+        <AnimatePresence>
+          {isHovering && (
+            <span className="z-20 absolute bottom-4 left-4 block overflow-hidden">
+              <motion.span
+                initial={{ y: "110%" }}
+                animate={{ y: "0%" }}
+                exit={{ y: "110%" }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="block uppercase text-white font-founders text-xl"
+              >
+                {project.name}
+              </motion.span>
+            </span>
+          )}
+        </AnimatePresence>
+      )}
     </motion.div>
   );
 

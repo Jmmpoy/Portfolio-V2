@@ -46,7 +46,7 @@ const data = [
     tags: ["Développement Front-End"],
     description: {
       firstPart:
-        "Pour Léa Zeroil, designer de mobilier basée en Normandie, j'ai développé le site e-commerce présentant ses collections de pièces sculpturales. L'objectif était de mettre en valeur chaque objet — luminaires, assises, tables — dans une expérience d'achat sobre et élégante, fidèle à l'univers de la marque.",
+        "Pour Léa Zeroil, designer de mobilier basée à Paris, j'ai développé le site e-commerce présentant ses collections de pièces sculpturales. L'objectif était de mettre en valeur chaque objet — luminaires, assises, tables — dans une expérience d'achat sobre et élégante, fidèle à l'univers de la marque.",
       secondPart:
         "Le site a été développé sur Next.js, avec une gestion du catalogue et du tunnel d'achat pensée pour une navigation fluide sur l'ensemble des collections.",
     },
@@ -64,7 +64,7 @@ const data = [
     id: "Maison90",
     name: "Maison90",
     year: "2023 - 2024",
-    tags: ["Direction Artistique", "UI Design"],
+    tags: ["Développement Front-End", "Direction Artistique", "UI Design"],
     description: {
       firstPart:
         "Pour accompagner la nouvelle identité de Maison90, j'ai assuré la refonte globale de leur site, en intervenant à la fois sur le design et le développement. J'ai contribué à la direction artistique — choix typographiques, palette, rythme visuel — afin d'incarner leur univers créatif dans une expérience digitale cohérente et performante.",
